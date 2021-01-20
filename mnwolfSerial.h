@@ -1,6 +1,3 @@
-#ifndef MNWOLF_SERIAL
-#define MNWOLF_SERIAL
-
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -8,9 +5,10 @@
 #include <string>
 #include <errno.h>
 
+using namespace std;
+
 bool initSerial();
 bool updateSerial();
-string parseSerial();
+std::string parseSerial();
 bool txSerial(string strTx);
-
-#endif
+bool closeSerial();

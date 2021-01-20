@@ -9,8 +9,8 @@ string strRx;
 bool initSerial() {
     uart0_filestream = open("/dev/ttyGS0", O_RDWR | O_NOCTTY | O_NDELAY);
     if (uart0_filestream == -1)
-        return FALSE;
-    
+        return false;
+
     struct termios options;
     tcgetattr(uart0_filestream, &options);
     options.c_cflag = B115200 | CS8 | CLOCAL | CREAD;
@@ -19,29 +19,29 @@ bool initSerial() {
     options.c_lflag = 0;
     tcflush(uart0_filestream, TCIFLUSH);
     tcsetattr(uart0_filestream, TCSANOW, &options);
-    
-    return TRUE;
+
+    return true;
 }
 
 bool updateSerial() {
   uint8_t rxBytes, rxByte;
-  
+
   rxBytes= read(uart0_filestream, (void*)rxByte, 1);
   if (rxBytes <= 0)
-    return FALSE;
-  
+    return false;
+
   switch (rxByte) {
     case '\n':
       break;
-      
+
     case '\r':
-      return TRUE;
+      return true;
       break;
-      
+
     default:
       strRx += (unsigned char)rxByte;
   }
-  return FALSE;
+  return false;
 }
 
 string parseSerial() {
@@ -52,8 +52,16 @@ string parseSerial() {
 
 bool txSerial(string strTx) {
     if (uart0_filestream == -1)
-        return FALSE;
+        return false;
 
     write(uart0_filestream, (char*)strTx.c_str(), strTx.length());
-    return TRUE;
+    return true;
+}
+
+bool closeSerial() {
+    if (uart0_filestream == -1)
+        return false;
+
+    close(uart0_filestream);
+    return true;
 }

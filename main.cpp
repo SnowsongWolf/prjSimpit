@@ -5,16 +5,26 @@
 #include <string>
 #include <errno.h>
 #include "raylib.h"
+#include "mnwolfSerial.h"
 
 using namespace std;
 
-int uart0_filestream = -1;
-int uart_tx_string(string tx_string);
+const bool debug = true;
+void dPrint(string strPrint);
+void dPrintln(string strPrint);
 
 int main()
 {
     int screenWidth = 1280;
     int screenHeight = 800;
+
+    bool serConn = initSerial();
+    if (serConn)
+        dPrintln("Serial connected.");
+    else
+        dPrintln("Serial connection error.\n\r");
+
+    txSerial("Hello!\n\r");
 
     Shader sh;
 
@@ -57,15 +67,26 @@ int main()
 
     sleep(10);
     UnloadRenderTexture(tgt);
+
     CloseWindow();
+
+    txSerial("Goodbye!\n\r");
+
+    if (closeSerial())
+        dPrintln("Serial closed.");
+    else
+        dPrintln("Error closing serial.");
+
 
     return 1;
 }
 
-int uart_tx_string(string tx_string) {
-    if (uart0_filestream == -1)
-        return 0;
+void dPrint(string strPrint) {
+    if (debug)
+        printf((char*)strPrint.c_str());
+}
 
-    write(uart0_filestream, (char*)tx_string.c_str(), tx_string.length());
-    return 1;
+void dPrintln(string strPrint) {
+    if (debug)
+        printf("%s%c%c",strPrint,'\n','\r');
 }

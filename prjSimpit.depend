@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1610676948 source:/home/pi/cpp/prjSimpit/main.cpp
+1611147611 source:/home/pi/cpp/prjSimpit/main.cpp
 	<stdio.h>
 	<unistd.h>
 	<fcntl.h>
@@ -7,4 +7,16 @@
 	<string>
 	<errno.h>
 	"raylib.h"
+	"mnwolfSerial.h"
+
+1611148831 /home/pi/cpp/prjSimpit/mnwolfSerial.h
+	<stdio.h>
+	<unistd.h>
+	<fcntl.h>
+	<termios.h>
+	<string>
+	<errno.h>
+
+1611148825 source:/home/pi/cpp/prjSimpit/mnwolfSerial.cpp
+	"mnwolfSerial.h"
 
