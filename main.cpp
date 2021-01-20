@@ -40,8 +40,8 @@ int main()
 
     RenderTexture2D tgt = LoadRenderTexture(screenWidth, screenHeight);
     GenTextureMipmaps(&font.texture);
-    SetTextureFilter(font.texture, FILTER_BILINEAR);
-    //SetTextureFilter(tgt.texture, FILTER_BILINEAR);
+    //SetTextureFilter(font.texture, FILTER_BILINEAR);
+    SetTextureFilter(tgt.texture, FILTER_BILINEAR);
 
     while(!WindowShouldClose())
     {
@@ -49,7 +49,7 @@ int main()
     ClearBackground(BLACK);
     BeginTextureMode(tgt);
     DrawFPS(10,10);
-    ClearBackground(BLACK);
+    //ClearBackground(BLACK);
     DrawTextEx(font, "MENU", (Vector2){15.0f, 106.0f}, 20, 2, (Color){118,182,216,255});
     DrawTextEx(font, "SYSTEM", (Vector2){5.0f, 131.0f}, 13, 1, (Color){118,182,216,255});
 
@@ -67,7 +67,7 @@ int main()
 
     EndDrawing();
     }
-    TakeScreenshot("./WithPost.png");
+    TakeScreenshot("./FilterPost.png");
     //sleep(10);
     UnloadRenderTexture(tgt);
 
