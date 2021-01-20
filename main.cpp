@@ -88,5 +88,5 @@ void dPrint(string strPrint) {
 
 void dPrintln(string strPrint) {
     if (debug)
-        printf("%s%c%c",strPrint,'\n','\r');
+        printf("%s%c%c",strPrint.c_str(),'\n','\r');
 }
