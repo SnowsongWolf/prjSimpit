@@ -49,3 +49,11 @@ string parseSerial() {
   strRx = "";
   return strTmp;
 }
+
+bool txSerial(string strTx) {
+    if (uart0_filestream == -1)
+        return FALSE;
+
+    write(uart0_filestream, (char*)strTx.c_str(), strTx.length());
+    return TRUE;
+}
