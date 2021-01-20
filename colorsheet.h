@@ -9,5 +9,5 @@
 #define UI_BOX          (Color){64,135,191,255}
 #define UI_BOX_LGT      (Color){113,208,253,255}
 
-#define UI_LINE_THIN    4.0f
-#define UI_LINE_THICK   6.0f
+#define UI_LINE_THIN    2.0f
+#define UI_LINE_THICK   4.0f
