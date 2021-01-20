@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1610676948 source:/home/pi/cpp/prjSimpit/main.cpp
+	<stdio.h>
+	<unistd.h>
+	<fcntl.h>
+	<termios.h>
+	<string>
+	<errno.h>
+	"raylib.h"
+
