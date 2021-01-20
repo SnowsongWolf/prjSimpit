@@ -99,6 +99,14 @@ int main()
     DrawLineEx((Vector2){162,187},(Vector2){1054,187},UI_LINE_THIN,UI_BOX_DRK);
     DrawLineEx((Vector2){795,169},(Vector2){795,187},UI_LINE_THICK,UI_LINE_LGT);
     DrawLineEx((Vector2){162+668,115},(Vector2){162+668,115+26},UI_LINE_THICK,UI_LINE_LGT);
+    DrawLineEx((Vector2){1054,101-16},(Vector2){1054,187},UI_LINE_THICK,UI_LINE_LGT);
+
+    DrawLineEx((Vector2){162,151},(Vector2){162,163},UI_LINE_THIN,UI_RED_DRK);
+    DrawLineEx((Vector2){162,163},(Vector2){1054,163},UI_LINE_THIN,UI_RED_DRK);
+    DrawLineEx((Vector2){791,151},(Vector2){791,163},UI_LINE_THICK,UI_RED);
+    DrawLineEx((Vector2){791,157},(Vector2){810,151},UI_LINE_THICK,UI_RED);
+    DrawLineEx((Vector2){791,157},(Vector2){810,163},UI_LINE_THICK,UI_RED);
+    DrawLineEx((Vector2){810,151},(Vector2){810,163},UI_LINE_THICK,UI_RED);
 
     DrawTextEx(font, "0.76", (Vector2){848.0f, 110.0f}, 36, 0, UI_LINE_LGT);
 
