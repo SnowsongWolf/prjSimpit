@@ -48,8 +48,7 @@ int main()
     BeginDrawing();
     ClearBackground(BLACK);
     BeginTextureMode(tgt);
-    DrawFPS(10,10);
-    //ClearBackground(BLACK);
+    ClearBackground(BLACK);
     DrawTextEx(font, "MENU", (Vector2){15.0f, 106.0f}, 20, 2, (Color){118,182,216,255});
     DrawTextEx(font, "SYSTEM", (Vector2){5.0f, 131.0f}, 13, 1, (Color){118,182,216,255});
 
@@ -61,13 +60,14 @@ int main()
 
     EndTextureMode();
 
-    BeginShaderMode(sh);
+    //BeginShaderMode(sh);
     DrawTextureRec(tgt.texture, (Rectangle){0, 0, tgt.texture.width, -tgt.texture.height}, (Vector2){0, 0}, WHITE);
-    EndShaderMode();
+    //EndShaderMode();
+    DrawFPS(10,10);
 
     EndDrawing();
     }
-    TakeScreenshot("./FilterPost.png");
+    TakeScreenshot("./FilterOnlyBlack.png");
     //sleep(10);
     UnloadRenderTexture(tgt);
 
