@@ -32,6 +32,7 @@ int main()
 
     InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
     MaximizeWindow();
+    HideCursor();
 
     SetTargetFPS(60);
     sh = LoadShader(0, "resources/shaders/glsl100/bloom.fs");
@@ -63,8 +64,6 @@ int main()
     BeginShaderMode(sh);
     DrawTextureRec(tgt.texture, (Rectangle){0, 0, tgt.texture.width, -tgt.texture.height}, (Vector2){0, 0}, WHITE);
     EndShaderMode();
-
-    DrawText("Congrats! You created your first window!", 190, 200, 20, SKYBLUE);
 
     EndDrawing();
     }
