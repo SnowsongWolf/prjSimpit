@@ -1,0 +1,63 @@
+include "target.tmh"
+include "hello.h"
+
+float lastVal;
+//alias _hello;
+
+//program startup
+int main()
+{
+    if(Init(&EventHandle)) return 1; // declare the event handler, return on error
+    
+    MapAxis(&Joystick, JOYX, DX_X_AXIS);
+    MapAxis(&Joystick, JOYY, DX_Y_AXIS);
+    MapAxis(&Throttle, THR_LEFT, 0);
+    //MapAxis(&Throttle, THR_RIGHT, DX_THROTTLE_AXIS);
+    MapAxis(&Throttle, THR_RIGHT, 0);
+    MapAxis(&Throttle, THR_FC, DX_SLIDER_AXIS, AXIS_REVERSED);
+    MapAxis(&T16000L, JOYX, DX_XROT_AXIS);
+    MapAxis(&T16000L, JOYY, DX_YROT_AXIS, AXIS_REVERSED);
+    MapAxis(&T16000L, RUDDER, DX_ZROT_AXIS, AXIS_REVERSED);
+    MapAxis(&TFRPRudder, TRUDDER, DX_Z_AXIS);
+	
+	//add initialization code here
+	//int this = fopen("this.txt","w");
+	
+	int hinstDLL;
+	int fhello;
+	int x = 0, itmp = 0;
+	
+	hinstDLL = LoadLibrary("prjSimpitC.dll");
+	if (hinstDLL != 0)
+	{
+		printf("Successfully loaded DLL instance %i\x0a",hinstDLL);
+		fhello = GetProcAddress(hinstDLL, "_hello");
+		
+		if (fhello != 0)
+			printf("Successfully loaded DLL function %i\x0a",fhello);
+			
+		Map(&_hello, fhello);
+		x = _hello();
+		
+		//fFreeDLL = FreeLibrary(hinstDLL);
+	}else
+		printf("Failed to load DLL instance %i.\x0a",hinstDLL);
+	//x = _hello();
+	printf("Returning %i", x);
+	FreeProcInstance(hinstDLL);
+}
+
+//event handler
+int EventHandle(int type, alias o, int x)
+{
+	float value = Throttle[THR_RIGHT] / 64 + 511;
+	if (value != lastVal) {
+		TrimDXAxis(DX_YROT_AXIS, SET(value));
+		//printf("%f\x0a",value);
+		lastVal = value;
+	};
+	
+    DefaultMapping(&o, x);
+	
+	//add event handling code here
+}
