@@ -38,6 +38,7 @@ int main()
     SetTargetFPS(60);
     sh = LoadShader(0, "resources/shaders/glsl100/bloom.fs");
     Font font = LoadFont("resources/fonts/BlenderPro-Heavy.ttf");
+    Font font2 = LoadFont("resources/pixantiqua.ttf");
 
     /*unsigned int fileSize = 0;
     unsigned char *fileData = LoadFileData("resources/fonts/BlenderPro-Heavy.ttf", &fileSize);
@@ -54,6 +55,7 @@ int main()
     RenderTexture2D tgt = LoadRenderTexture(screenWidth, screenHeight);
     GenTextureMipmaps(&font.texture);
     SetTextureFilter(font.texture, FILTER_BILINEAR);
+    SetTextureFilter(font2.texture, FILTER_BILINEAR);
     //SetTextureFilter(tgt.texture, FILTER_BILINEAR);
 
     while(!WindowShouldClose() && !updateSerial())
@@ -65,8 +67,8 @@ int main()
     DrawTextEx(font, "MENU", (Vector2){27.0f, 15.0f}, 30, 2, UI_LINE_LGT);
     DrawTextEx(font, "SYSTEM", (Vector2){4.0f, 52.0f}, 20, 1, UI_LINE_LGT);
     DrawTextEx(font, "ITEMS", (Vector2){198.0f, 52.0f}, 20, 1, UI_LINE_LGT);
-    DrawTextEx(font, "USAGE", (Vector2){63.0f, 112.0f}, 20, 1, UI_LINE_LGT);
-    DrawTextEx(font, "REQUIRED", (Vector2){62.0f, 167.0f}, 18, 1, UI_LINE_LGT);
+    DrawTextEx(font, "USAGE", (Vector2){63.0f, 112.0f}, 28, 0, UI_LINE_LGT);
+    DrawTextEx(font, "REQUIRED", (Vector2){62.0f, 167.0f}, 18, 0, UI_LINE_LGT);
 
     DrawRectangleRoundedLines((Rectangle){6,12,114,34}, 0.2f, 0, UI_LINE_THIN, UI_BOX);
 
@@ -83,7 +85,7 @@ int main()
     DrawLineEx((Vector2){0,7},(Vector2){1280,7},UI_LINE_THIN,UI_LINE_DRK);
 
     DrawRectangleV((Vector2){162,101},(Vector2){892,9},UI_BOX_DRK);
-    DrawRectangleV((Vector2){162,115},(Vector2){892,26},UI_BOX_DRK);
+    DrawRectangleV((Vector2){162,115},(Vector2){668,26},UI_BOX_DRK);
     DrawRectangleV((Vector2){162,175},(Vector2){633,8},UI_LINE_LGT);
     for (int x = 263; x < 974; x += 100) {
         DrawLineEx((Vector2){x,109},(Vector2){x,147},UI_LINE_THIN,UI_BOX);
@@ -96,7 +98,9 @@ int main()
     DrawLineEx((Vector2){162,169},(Vector2){1054,169},UI_LINE_THIN,UI_BOX_DRK);
     DrawLineEx((Vector2){162,187},(Vector2){1054,187},UI_LINE_THIN,UI_BOX_DRK);
     DrawLineEx((Vector2){795,169},(Vector2){795,187},UI_LINE_THICK,UI_LINE_LGT);
+    DrawLineEx((Vector2){162+668,115},(Vector2){162+668,115+26},UI_LINE_THICK,UI_LINE_LGT);
 
+    DrawTextEx(font, "0.76", (Vector2){848.0f, 110.0f}, 36, 0, UI_LINE_LGT);
 
     EndTextureMode();
 
