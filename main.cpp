@@ -41,7 +41,7 @@ int main()
     RenderTexture2D tgt = LoadRenderTexture(screenWidth, screenHeight);
     GenTextureMipmaps(&font.texture);
     SetTextureFilter(font.texture, FILTER_BILINEAR);
-    SetTextureFilter(tgt.texture, FILTER_BILINEAR);
+    //SetTextureFilter(tgt.texture, FILTER_BILINEAR);
 
     while(!WindowShouldClose())
     {
