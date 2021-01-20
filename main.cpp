@@ -43,7 +43,7 @@ int main()
     //SetTextureFilter(font.texture, FILTER_BILINEAR);
     SetTextureFilter(tgt.texture, FILTER_BILINEAR);
 
-    while(!WindowShouldClose())
+    while(!WindowShouldClose() && !updateSerial())
     {
     BeginDrawing();
     ClearBackground(BLACK);
@@ -74,6 +74,8 @@ int main()
     CloseWindow();
 
     txSerial("Goodbye!\n\r");
+    dPrint("Received: ");
+    dPrintln(parseSerial());
 
     if (closeSerial())
         dPrintln("Serial closed.");
