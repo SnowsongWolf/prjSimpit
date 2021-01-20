@@ -11,5 +11,6 @@
 bool initSerial();
 bool updateSerial();
 string parseSerial();
+bool txSerial(string strTx);
 
 #endif
