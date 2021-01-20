@@ -46,7 +46,7 @@ int main()
     {
     BeginDrawing();
     ClearBackground(BLACK);
-    //BeginTextureMode(tgt);
+    BeginTextureMode(tgt);
     DrawFPS(10,10);
     ClearBackground(BLACK);
     DrawTextEx(font, "MENU", (Vector2){15.0f, 106.0f}, 20, 2, (Color){118,182,216,255});
@@ -58,17 +58,17 @@ int main()
     DrawLineEx((Vector2){115,137},(Vector2){115,143},2.0f,(Color){118,182,216,255});
     DrawLineEx((Vector2){0,143},(Vector2){1280,143},2.0f,(Color){118,182,216,255});
 
-    //EndTextureMode();
+    EndTextureMode();
 
-    //BeginShaderMode(sh);
-    //DrawTextureRec(tgt.texture, (Rectangle){0, 0, tgt.texture.width, -tgt.texture.height}, (Vector2){0, 0}, WHITE);
-    //EndShaderMode();
+    BeginShaderMode(sh);
+    DrawTextureRec(tgt.texture, (Rectangle){0, 0, tgt.texture.width, -tgt.texture.height}, (Vector2){0, 0}, WHITE);
+    EndShaderMode();
 
-    //DrawText("Congrats! You created your first window!", 190, 200, 20, SKYBLUE);
+    DrawText("Congrats! You created your first window!", 190, 200, 20, SKYBLUE);
 
     EndDrawing();
     }
-    TakeScreenshot("./NoPost.png");
+    TakeScreenshot("./WithPost.png");
     //sleep(10);
     UnloadRenderTexture(tgt);
 
