@@ -24,23 +24,31 @@ bool initSerial() {
 }
 
 bool updateSerial() {
-  uint8_t rxBytes, rxByte;
+  int8_t rxBytes;
+  char rxByte;
 
-  rxBytes= read(uart0_filestream, (void*)rxByte, 1);
+  rxBytes = read(uart0_filestream, &rxByte, sizeof(rxByte));
+  //printf("Bytes received: %i ",rxBytes);
   if (rxBytes <= 0)
     return false;
 
+    printf("Bytes received: %i | Data received: %i",rxBytes, (uint8_t)rxByte);
+
   switch (rxByte) {
     case '\n':
+      printf(" | \\n detected.\n\r");
       break;
 
     case '\r':
+      printf(" | \\r detected.\n\r");
       return true;
       break;
 
     default:
-      strRx += (unsigned char)rxByte;
+      strRx += rxByte;
+      printf(" | Character received: %c",rxByte);
   }
+  printf("\n\r");
   return false;
 }
 

@@ -6,6 +6,7 @@
 #include <errno.h>
 #include "raylib.h"
 #include "mnwolfSerial.h"
+#include "colorsheet.h"
 
 using namespace std;
 
@@ -36,11 +37,22 @@ int main()
 
     SetTargetFPS(60);
     sh = LoadShader(0, "resources/shaders/glsl100/bloom.fs");
-    Font font = LoadFont("resources/fonts/BlenderPro-Heavy.ttf");
+    //Font font = LoadFont("resources/fonts/BlenderPro-Heavy.ttf");
+    unsigned int fileSize = 0;
+    unsigned char *fileData = LoadFileData("resources/fonts/BlenderPro-Heavy.ttf", &fileSize);
+
+    Font font = {0};
+    font.baseSize = 30;
+    font.charsCount = 95;
+    font.chars = LoadFontData(fileData, fileSize, 30, 0, 0, FONT_SDF);
+    Image atlas = GenImageFontAtlas(font.chars, &font.recs, 95, 30, 0, 1);
+    font.texture = LoadTextureFromImage(atlas);
+    UnloadImage(atlas);
+    UnloadFileData(fileData);
 
     RenderTexture2D tgt = LoadRenderTexture(screenWidth, screenHeight);
     GenTextureMipmaps(&font.texture);
-    //SetTextureFilter(font.texture, FILTER_BILINEAR);
+    SetTextureFilter(font.texture, FILTER_BILINEAR);
     SetTextureFilter(tgt.texture, FILTER_BILINEAR);
 
     while(!WindowShouldClose() && !updateSerial())
@@ -49,14 +61,14 @@ int main()
     ClearBackground(BLACK);
     BeginTextureMode(tgt);
     ClearBackground(BLACK);
-    DrawTextEx(font, "MENU", (Vector2){15.0f, 106.0f}, 20, 2, (Color){118,182,216,255});
-    DrawTextEx(font, "SYSTEM", (Vector2){5.0f, 131.0f}, 13, 1, (Color){118,182,216,255});
+    DrawTextEx(font, "MENU", (Vector2){17.0f, 15.0f}, 30, 2, UI_LINE_LGT);
+    DrawTextEx(font, "SYSTEM", (Vector2){4.0f, 54.0f}, 20, 1, UI_LINE_LGT);
 
-    DrawRectangleRoundedLines((Rectangle){3,105,72,21}, 0.2f, 0, 2, (Color){65,127,181,255});
-    DrawLineEx((Vector2){0,130},(Vector2){104,130},2.0f,(Color){118,182,216,255});
-    DrawLineEx((Vector2){115,137},(Vector2){104,130},2.0f,(Color){118,182,216,255});
-    DrawLineEx((Vector2){115,137},(Vector2){115,143},2.0f,(Color){118,182,216,255});
-    DrawLineEx((Vector2){0,143},(Vector2){1280,143},2.0f,(Color){118,182,216,255});
+    DrawRectangleRoundedLines((Rectangle){6,12,114,34}, 0.2f, 0, UI_LINE_THIN, UI_BOX);
+    DrawLineEx((Vector2){0,51},(Vector2){170,51},UI_LINE_THIN,UI_LINE_LGT);
+    DrawLineEx((Vector2){170,51},(Vector2){184,62},UI_LINE_THIN,UI_LINE_LGT);
+    DrawLineEx((Vector2){184,62},(Vector2){184,72},UI_LINE_THIN,UI_LINE_LGT);
+    DrawLineEx((Vector2){0,72},(Vector2){1280,72},UI_LINE_THIN,UI_LINE_LGT);
 
     EndTextureMode();
 

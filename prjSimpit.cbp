@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="colorsheet.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="mnwolfSerial.cpp" />
 		<Unit filename="mnwolfSerial.h" />
