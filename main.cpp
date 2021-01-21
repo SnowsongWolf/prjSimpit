@@ -46,7 +46,7 @@ int main()
     Font font = {0};
     font.baseSize = 100;
     font.charsCount = 95;
-    font.chars = LoadFontData(fileData, fileSize, 100, 0, 0, FONT_SDF);
+    font.chars = LoadFontData(fileData, fileSize, 100, 0, 0, FONT_DEFAULT);
     Image atlas = GenImageFontAtlas(font.chars, &font.recs, 95, 100, 0, 1);
     font.texture = LoadTextureFromImage(atlas);
     UnloadImage(atlas);
