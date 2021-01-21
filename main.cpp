@@ -122,7 +122,7 @@ int main()
 
     EndDrawing();
     }
-    TakeScreenshot("./TextTest.png");
+    TakeScreenshot("./TextTest2.png");
     //sleep(10);
     UnloadRenderTexture(tgt);
 
