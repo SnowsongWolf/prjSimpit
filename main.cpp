@@ -37,25 +37,25 @@ int main()
 
     SetTargetFPS(60);
     sh = LoadShader(0, "resources/shaders/glsl100/bloom.fs");
-    Font font = LoadFont("resources/fonts/BlenderPro-Heavy.ttf");
-    Font font2 = LoadFont("resources/pixantiqua.ttf");
+    //Font font = LoadFont("resources/fonts/BlenderPro-Heavy.ttf");
+    //Font font2 = LoadFont("resources/pixantiqua.ttf");
 
-    /*unsigned int fileSize = 0;
+    unsigned int fileSize = 0;
     unsigned char *fileData = LoadFileData("resources/fonts/BlenderPro-Heavy.ttf", &fileSize);
 
     Font font = {0};
-    font.baseSize = 16;
+    font.baseSize = 100;
     font.charsCount = 95;
-    font.chars = LoadFontData(fileData, fileSize, 16, 0, 0, FONT_SDF);
-    Image atlas = GenImageFontAtlas(font.chars, &font.recs, 95, 16, 0, 1);
+    font.chars = LoadFontData(fileData, fileSize, 100, 0, 0, FONT_SDF);
+    Image atlas = GenImageFontAtlas(font.chars, &font.recs, 95, 100, 0, 1);
     font.texture = LoadTextureFromImage(atlas);
     UnloadImage(atlas);
-    UnloadFileData(fileData);*/
+    UnloadFileData(fileData);
 
     RenderTexture2D tgt = LoadRenderTexture(screenWidth, screenHeight);
     GenTextureMipmaps(&font.texture);
     SetTextureFilter(font.texture, FILTER_BILINEAR);
-    SetTextureFilter(font2.texture, FILTER_BILINEAR);
+    //SetTextureFilter(font2.texture, FILTER_BILINEAR);
     //SetTextureFilter(tgt.texture, FILTER_BILINEAR);
 
     while(!WindowShouldClose() && !updateSerial())
@@ -110,6 +110,9 @@ int main()
 
     DrawTextEx(font, "0.76", (Vector2){848.0f, 110.0f}, 36, 0, UI_LINE_LGT);
 
+    DrawRectangleV((Vector2){200,200},MeasureTextEx(font, "AaBbCcDd", 100, 0),UI_BOX);
+    DrawTextEx(font, "AaBbCcDd", (Vector2){200.0f,200.0f}, 100, 0, UI_LINE_LGT);
+
     EndTextureMode();
 
     //BeginShaderMode(sh);
@@ -119,7 +122,7 @@ int main()
 
     EndDrawing();
     }
-    TakeScreenshot("./FilterOnlyBlack.png");
+    TakeScreenshot("./TextTest.png");
     //sleep(10);
     UnloadRenderTexture(tgt);
 
