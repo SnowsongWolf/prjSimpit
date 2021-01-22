@@ -103,7 +103,7 @@ int main()
     for (int x = 11; x < 16; x++)
     {
         sprintf(ch_x,"%i",x);
-        DrawTextEx(font, ch_x,(Vector2){554 - (x - 11) * 93, 18}, 59, 0, UI_GREEN_LGT);
+        DrawTextEx(font, ch_x,(Vector2){554 - (x - 11) * 93, 723}, 59, 0, UI_GREEN_LGT);
     }
         
     //MFD right column buttons
