@@ -87,12 +87,7 @@ int main()
     DrawRectangleRoundedLines((Rectangle){18,456,59,59},0.1f,0,1,UI_BOX_LGT);
     DrawRectangleRoundedLines((Rectangle){18,542,59,59},0.1f,0,1,UI_BOX_LGT);
     
-    for (int x = 6; x < 10; x++)
-    {
-        sprintf(ch_x,"%i",x);
-        DrawTextEx(font, ch_x,(Vector2){46, 200 + (x - 6) * 93}, 59, 0, UI_GREEN_LGT);
-    }
-    DrawTextEx(font, "10",(Vector2){21, 542}, 59, 0, UI_GREEN_LGT);
+    
         
     //MFD bottom column buttons
     DrawRectangleRoundedLines((Rectangle){184,723,59,59},0.1f,0,1,UI_BOX_LGT);
@@ -107,6 +102,14 @@ int main()
     DrawRectangleRoundedLines((Rectangle){722,371,59,59},0.1f,0,1,UI_BOX_LGT);
     DrawRectangleRoundedLines((Rectangle){722,456,59,59},0.1f,0,1,UI_BOX_LGT);
     DrawRectangleRoundedLines((Rectangle){722,542,59,59},0.1f,0,1,UI_BOX_LGT);
+        
+    ch_x = {0,0,0};
+    for (int x = 6; x < 10; x++)
+    {
+        sprintf(ch_x,"%i",x);
+        DrawTextEx(font, ch_x,(Vector2){46, 200 + (x - 6) * 85}, 59, 0, UI_GREEN_LGT);
+    }
+    DrawTextEx(font, "10",(Vector2){21, 542}, 59, 0, UI_GREEN_LGT);
         
     //MFD corner rocker buttons
     DrawRectangleRoundedLines((Rectangle){18,78,59,100},0.1f,0,1,UI_BOX_LGT);
