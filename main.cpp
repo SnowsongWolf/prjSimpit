@@ -112,14 +112,14 @@ int main()
 
     //DrawRectangleRoundedLines((Rectangle){200,200,100,100}, 0.5f, 0, UI_LINE_THIN, UI_RED);
     DrawRectanglePro((Rectangle){400,400,100,200}, (Vector2){0,0},0.0f,UI_LINE_LGT);
-    DrawRectanglePro((Rectangle){400,400,100,200}, (Vector2){0,0},30.0f,UI_GREEN_LGT);
+    DrawRectanglePro((Rectangle){400,400,100,200}, (Vector2){50,100},30.0f,UI_GREEN_LGT);
 
     EndTextureMode();
 
     //BeginShaderMode(sh);
     DrawTextureRec(tgt.texture, (Rectangle){0, 0, tgt.texture.width, -tgt.texture.height}, (Vector2){0, 0}, WHITE);
     //EndShaderMode();
-    DrawFPS(10,10);
+    //DrawFPS(10,10);
 
     EndDrawing();
     }
