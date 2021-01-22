@@ -45,17 +45,17 @@ int main()
     unsigned char *fileData = LoadFileData("resources/fonts/BlenderPro-Heavy.ttf", &fileSize);
 
     Font font = {0};
-    font.baseSize = 100;
+    font.baseSize = 50;
     font.charsCount = 95;
-    font.chars = LoadFontData(fileData, fileSize, 100, 0, 0, FONT_DEFAULT);
-    Image atlas = GenImageFontAtlas(font.chars, &font.recs, 95, 100, 0, 1);
+    font.chars = LoadFontData(fileData, fileSize, 50, 0, 0, FONT_DEFAULT);
+    Image atlas = GenImageFontAtlas(font.chars, &font.recs, 95, 50, 0, 1);
     font.texture = LoadTextureFromImage(atlas);
     UnloadImage(atlas);
     UnloadFileData(fileData);
 
     //RenderTexture2D tgt = LoadRenderTexture(screenWidth, screenHeight);
     GenTextureMipmaps(&font.texture);
-    //SetTextureFilter(font.texture, FILTER_BILINEAR);
+    SetTextureFilter(font.texture, FILTER_BILINEAR);
     //SetTextureFilter(font2.texture, FILTER_BILINEAR);
     //SetTextureFilter(tgt.texture, FILTER_BILINEAR);
 
@@ -170,7 +170,7 @@ int main()
 
     EndDrawing();
     }
-    TakeScreenshot("./RecTest.png");
+    TakeScreenshot("./Template.png");
     //sleep(10);
     //UnloadRenderTexture(tgt);
 
