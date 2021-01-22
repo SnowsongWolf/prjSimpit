@@ -76,7 +76,7 @@ int main()
     char ch_x = {0};
     for (int x = 1; x < 6; x++)
     {
-        sprintf(ch_x,"%i",x);
+        sprintf(ch_x,"%d",x);
         DrawTextEx(font, ch_x,(Vector2){202 + (x - 1) * 93, 18}, 59, 0, UI_GREEN_LGT);
     }
     
