@@ -36,6 +36,8 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="mnwolfSerial.cpp" />
 		<Unit filename="mnwolfSerial.h" />
+		<Unit filename="ui.cpp" />
+		<Unit filename="ui.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

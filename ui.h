@@ -7,7 +7,7 @@
 
 using namespace std;
 
-public struct Padding {
+struct Padding {
   int left;
   int right;
   int top;
@@ -16,11 +16,11 @@ public struct Padding {
 
 #define PADDING_NONE    (Padding){0,0,0,0}
 
-public enum Align {A_LEFT, A_CENTER, A_RIGHT};
-public enum VAlign {V_TOP, V_CENTER, V_BOTTOM};
+enum Align {A_LEFT = 0, A_CENTER = 1, A_RIGHT = 2};
+enum VAlign {V_TOP = 0, V_CENTER = 1, V_BOTTOM = 2};
 
-public void textAlign(Font t_font, string strText, Rectangle t_area, float t_size, float t_spacing = 0, Color t_color, 
+void textAlign(Font t_font, string strText, Rectangle t_area, float t_size, float t_spacing, Color t_color,
              Padding t_padding = PADDING_NONE, Align al = A_CENTER, VAlign val = V_CENTER);
 
-public void textAlign(Font t_font, string strText, Vector2 t_point, float t_size, float t_spacing = 0, Color t_color, 
+void textAlign(Font t_font, string strText, Vector2 t_point, float t_size, float t_spacing, Color t_color,
              Padding t_padding = PADDING_NONE, Align al = A_CENTER, VAlign val = V_CENTER);

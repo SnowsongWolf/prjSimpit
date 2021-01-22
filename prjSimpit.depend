@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1611167665 source:/home/pi/cpp/prjSimpit/main.cpp
+1611342476 source:/home/pi/cpp/prjSimpit/main.cpp
 	<stdio.h>
 	<unistd.h>
 	<fcntl.h>
@@ -9,6 +9,7 @@
 	"raylib.h"
 	"mnwolfSerial.h"
 	"colorsheet.h"
+	"ui.h"
 
 1611148831 /home/pi/cpp/prjSimpit/mnwolfSerial.h
 	<stdio.h>
@@ -21,5 +22,12 @@
 1611161983 source:/home/pi/cpp/prjSimpit/mnwolfSerial.cpp
 	"mnwolfSerial.h"
 
-1611167711 /home/pi/cpp/prjSimpit/colorsheet.h
+1611280930 /home/pi/cpp/prjSimpit/colorsheet.h
+
+1611343206 /home/pi/cpp/prjSimpit/ui.h
+	<string>
+	<unistd.h>
+	<fcntl.h>
+	<termios.h>
+	"raylib.h"
 
