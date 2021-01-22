@@ -74,11 +74,11 @@ int main()
     DrawRectangleRoundedLines((Rectangle){556,18,59,59},0.1f,0,1,UI_BOX_LGT);
     
     //MFD left row buttons
-    DrawRectangleRoundedLines((Rectangle){63,200,59,59},0.1f,0,1,UI_BOX_LGT);
-    DrawRectangleRoundedLines((Rectangle){63,285,59,59},0.1f,0,1,UI_BOX_LGT);
-    DrawRectangleRoundedLines((Rectangle){63,371,59,59},0.1f,0,1,UI_BOX_LGT);
-    DrawRectangleRoundedLines((Rectangle){63,456,59,59},0.1f,0,1,UI_BOX_LGT);
-    DrawRectangleRoundedLines((Rectangle){63,542,59,59},0.1f,0,1,UI_BOX_LGT);
+    DrawRectangleRoundedLines((Rectangle){18,200,59,59},0.1f,0,1,UI_BOX_LGT);
+    DrawRectangleRoundedLines((Rectangle){18,285,59,59},0.1f,0,1,UI_BOX_LGT);
+    DrawRectangleRoundedLines((Rectangle){18,371,59,59},0.1f,0,1,UI_BOX_LGT);
+    DrawRectangleRoundedLines((Rectangle){18,456,59,59},0.1f,0,1,UI_BOX_LGT);
+    DrawRectangleRoundedLines((Rectangle){18,542,59,59},0.1f,0,1,UI_BOX_LGT);
         
     //MFD bottom column buttons
     DrawRectangleRoundedLines((Rectangle){184,723,59,59},0.1f,0,1,UI_BOX_LGT);
@@ -95,9 +95,9 @@ int main()
     DrawRectangleRoundedLines((Rectangle){722,542,59,59},0.1f,0,1,UI_BOX_LGT);
         
     //MFD corner rocker buttons
-    DrawRectangleRoundedLines((Rectangle){63,78,59,100},0.1f,0,1,UI_BOX_LGT);
+    DrawRectangleRoundedLines((Rectangle){18,78,59,100},0.1f,0,1,UI_BOX_LGT);
     DrawRectangleRoundedLines((Rectangle){722,78,59,100},0.1f,0,1,UI_BOX_LGT);
-    DrawRectangleRoundedLines((Rectangle){63,613,59,100},0.1f,0,1,UI_BOX_LGT);
+    DrawRectangleRoundedLines((Rectangle){18,613,59,100},0.1f,0,1,UI_BOX_LGT);
     DrawRectangleRoundedLines((Rectangle){722,613,59,100},0.1f,0,1,UI_BOX_LGT);
 
     //EndTextureMode();
