@@ -62,7 +62,7 @@ int main()
     {
     BeginDrawing();
     ClearBackground(BLACK);
-    BeginTextureMode(tgt);
+    /*BeginTextureMode(tgt);
     ClearBackground(BLACK);
     DrawTextEx(font, "MENU", (Vector2){27.0f, 15.0f}, 30, 2, UI_LINE_LGT);
     DrawTextEx(font, "SYSTEM", (Vector2){4.0f, 52.0f}, 20, 1, UI_LINE_LGT);
@@ -112,12 +112,13 @@ int main()
 
     //DrawRectangleRoundedLines((Rectangle){200,200,100,100}, 0.5f, 0, UI_LINE_THIN, UI_RED);
     DrawRectanglePro((Rectangle){400,400,100,200}, (Vector2){0,0},0.0f,UI_LINE_LGT);
-    DrawRectanglePro((Rectangle){400,400,100,200}, (Vector2){50,100},30.0f,UI_GREEN_LGT);
+    DrawRectanglePro((Rectangle){400,400,100,200}, (Vector2){50,100},30.0f,UI_GREEN_LGT);*/
+    
+    DrawRectangleLines(99,99,602,602,UI_LINE);
 
     EndTextureMode();
 
     //BeginShaderMode(sh);
-    GenTextureMipmaps(&tgt.texture);
     DrawTextureRec(tgt.texture, (Rectangle){0, 0, tgt.texture.width, -tgt.texture.height}, (Vector2){0, 0}, WHITE);
     //EndShaderMode();
     //DrawFPS(10,10);
