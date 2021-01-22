@@ -73,7 +73,7 @@ int main()
     DrawRectangleRoundedLines((Rectangle){464,18,59,59},0.1f,0,1,UI_BOX_LGT);
     DrawRectangleRoundedLines((Rectangle){556,18,59,59},0.1f,0,1,UI_BOX_LGT);
         
-    char ch_x[3] = {0};
+    memset(ch_x, '\0', 3);
     for (int x = 1; x < 6; x++)
     {
         sprintf(ch_x,"%i",x);
