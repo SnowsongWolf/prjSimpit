@@ -3,6 +3,7 @@
 #include <fcntl.h>
 #include <termios.h>
 #include <string>
+#include <cstring>
 #include <errno.h>
 #include "raylib.h"
 #include "mnwolfSerial.h"
@@ -73,7 +74,7 @@ int main()
     DrawRectangleRoundedLines((Rectangle){464,18,59,59},0.1f,0,1,UI_BOX_LGT);
     DrawRectangleRoundedLines((Rectangle){556,18,59,59},0.1f,0,1,UI_BOX_LGT);
         
-    memset(ch_x, '\0', 3);
+    char ch_x = {0};
     for (int x = 1; x < 6; x++)
     {
         sprintf(ch_x,"%i",x);
@@ -103,7 +104,7 @@ int main()
     DrawRectangleRoundedLines((Rectangle){722,456,59,59},0.1f,0,1,UI_BOX_LGT);
     DrawRectangleRoundedLines((Rectangle){722,542,59,59},0.1f,0,1,UI_BOX_LGT);
         
-    memcpy(ch_x, '\0', sizeof(ch_x));
+    memset(ch_x, '\0', sizeof(ch_x));
     for (int x = 6; x < 10; x++)
     {
         sprintf(ch_x,"%i",x);
