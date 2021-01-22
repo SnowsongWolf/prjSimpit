@@ -1,0 +1,1 @@
+codeblocks --build ./prjSimpit.cbp
