@@ -8,7 +8,7 @@
 #define UI_BOX_DRK      (Color){49,98,145,255}
 #define UI_BOX          (Color){64,135,191,255}
 #define UI_BOX_LGT      (Color){113,208,253,255}
-#define UI_GREEN_LGT    (Color){0,226,232,255}
+#define UI_GREEN_LGT    (Color){43,245,190,255}
 
 #define UI_LINE_THIN    2.0f
 #define UI_LINE_THICK   4.0f
