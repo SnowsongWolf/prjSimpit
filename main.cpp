@@ -3,7 +3,6 @@
 #include <fcntl.h>
 #include <termios.h>
 #include <string>
-#include <cstring>
 #include <errno.h>
 #include "raylib.h"
 #include "mnwolfSerial.h"
