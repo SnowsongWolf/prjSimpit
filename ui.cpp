@@ -28,7 +28,7 @@ void textAlign(Font t_font, string strText, Rectangle t_area, float t_size, floa
       break;
 
     case V_CENTER:
-      origin.y = t_area.height / 2 + t_area.y - (tmpSize.y + t_padding.top + t_padding.bottom) / 2 - (t_padding.top + t_padding.bottom) / 2;
+      origin.y = t_area.height / 2 + t_area.y - tmpSize.y / 2 - t_padding.top;
       break;
 
     case V_BOTTOM:
