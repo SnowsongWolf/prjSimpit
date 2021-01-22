@@ -27,7 +27,7 @@ int main()
 
     txSerial("Hello!\n\r");
 
-    Shader sh;
+    //Shader sh;
 
     SetConfigFlags(FLAG_WINDOW_UNDECORATED | FLAG_MSAA_4X_HINT);
 
@@ -36,7 +36,7 @@ int main()
     HideCursor();
 
     SetTargetFPS(60);
-    sh = LoadShader(0, "resources/shaders/glsl100/bloom.fs");
+    //sh = LoadShader(0, "resources/shaders/glsl100/bloom.fs");
     //Font font = LoadFont("resources/fonts/BlenderPro-Heavy.ttf");
     //Font font2 = LoadFont("resources/pixantiqua.ttf");
 
@@ -117,6 +117,7 @@ int main()
     EndTextureMode();
 
     //BeginShaderMode(sh);
+    GenTextureMipmaps(&tgt.texture);
     DrawTextureRec(tgt.texture, (Rectangle){0, 0, tgt.texture.width, -tgt.texture.height}, (Vector2){0, 0}, WHITE);
     //EndShaderMode();
     //DrawFPS(10,10);
