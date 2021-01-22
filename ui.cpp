@@ -11,7 +11,7 @@ void textAlign(Font t_font, string strText, Rectangle t_area, float t_size, floa
       break;
 
     case A_CENTER:
-      origin.x = (tmpSize.x + t_padding.left + t_padding.right) / 2 + t_area.width / 2 + t_area.x + t_padding.left;  // I have a headache
+      origin.x = t_area.width / 2 + t_area.x - tmpSize.x / 2 - t_padding.left;  // I have a headache
       break;
 
     case A_RIGHT:
