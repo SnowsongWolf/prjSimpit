@@ -152,11 +152,11 @@ int main()
     textAlign(font, "27", (Rectangle){18,78,59,100}, 50, 0, UI_GREEN_LGT, pfont, A_CENTER, V_TOP);
     textAlign(font, "28", (Rectangle){18,78,59,100}, 50, 0, UI_GREEN_LGT, pfont, A_CENTER, V_BOTTOM);
     DrawRectangleRoundedLines((Rectangle){722,78,59,100},0.1f,0,1,UI_BOX_LGT);
-    textAlign(font, "25", (Rectangle){722,78,59,100}, 50, 0, UI_GREEN_LGT, pfont, A_CENTER, V_TOP);
-    textAlign(font, "26", (Rectangle){722,78,59,100}, 50, 0, UI_GREEN_LGT, pfont, A_CENTER, V_BOTTOM);
+    textAlign(font, "21", (Rectangle){722,78,59,100}, 50, 0, UI_GREEN_LGT, pfont, A_CENTER, V_TOP);
+    textAlign(font, "22", (Rectangle){722,78,59,100}, 50, 0, UI_GREEN_LGT, pfont, A_CENTER, V_BOTTOM);
     DrawRectangleRoundedLines((Rectangle){18,613,59,100},0.1f,0,1,UI_BOX_LGT);
-    textAlign(font, "21", (Rectangle){18,613,59,100}, 50, 0, UI_GREEN_LGT, pfont, A_CENTER, V_TOP);
-    textAlign(font, "22", (Rectangle){18,613,59,100}, 50, 0, UI_GREEN_LGT, pfont, A_CENTER, V_BOTTOM);
+    textAlign(font, "25", (Rectangle){18,613,59,100}, 50, 0, UI_GREEN_LGT, pfont, A_CENTER, V_TOP);
+    textAlign(font, "26", (Rectangle){18,613,59,100}, 50, 0, UI_GREEN_LGT, pfont, A_CENTER, V_BOTTOM);
     DrawRectangleRoundedLines((Rectangle){722,613,59,100},0.1f,0,1,UI_BOX_LGT);
     textAlign(font, "23", (Rectangle){722,613,59,100}, 50, 0, UI_GREEN_LGT, pfont, A_CENTER, V_TOP);
     textAlign(font, "24", (Rectangle){722,613,59,100}, 50, 0, UI_GREEN_LGT, pfont, A_CENTER, V_BOTTOM);
