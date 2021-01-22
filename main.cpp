@@ -90,9 +90,9 @@ int main()
     for (int x = 6; x < 10; x++)
     {
         sprintf(ch_x,"%i",x);
-        DrawTextEx(font, ch_x,(Vector2){46, 200 + (x - 6) * 93, 18}, 59, 0, UI_GREEN_LGT);
+        DrawTextEx(font, ch_x,(Vector2){46, 200 + (x - 6) * 93}, 59, 0, UI_GREEN_LGT);
     }
-    DrawTextEx(font, "10",(Vector2){21, 542, 59, 0, UI_GREEN_LGT);
+    DrawTextEx(font, "10",(Vector2){21, 542}, 59, 0, UI_GREEN_LGT);
         
     //MFD bottom column buttons
     DrawRectangleRoundedLines((Rectangle){184,723,59,59},0.1f,0,1,UI_BOX_LGT);
