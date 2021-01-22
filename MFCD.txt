@@ -1,0 +1,42 @@
+MFCD screens:
+
+- Preflight
+  - fresh spawn button
+  - new ship button
+  - check power
+  - check lights
+  - check doors
+  - check landing gear
+  - check flight assist
+  - check vtol
+  - check DSMS
+    - check load out
+    - check ammunition
+    - check missiles/torpedos
+- DSMS
+  - Show inventory of missiles/torpedos
+  - Show inventory of ballistic guns
+  - Color of inventory indicates armed/safe state
+  - Page to edit inventory
+  - Page to edit loadout
+- Power Management
+  - Should be able to recreate balance triangle
+  - Indicators for power to
+    - Engines
+    - No weapons (power on/off is equivalent to armed/safe)
+    - Shields
+    - Main power
+- Flight Info
+  - Exterior door status
+  - Door lock status
+  - Exterior light status
+  - VTOL status
+  - Flight assist status
+  - Gear status (also on LG panel)
+  - Gear lock status
+  - Weapon overview
+- Ground Info
+  - Engine accelleration status
+  - Gear display
+  - Light status
+  - Weapon overview
