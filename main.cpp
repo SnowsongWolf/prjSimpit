@@ -77,7 +77,7 @@ int main()
     for (int x = 1; x < 6; x++)
     {
         sprintf(ch_x,"%i",x);
-        DrawTextEx(font, x.c_str(),(Vector2){184 + (x - 1) * 93, 18}, 59, 0, UI_GRNEEN_LGT);
+        DrawTextEx(font, ch_x,(Vector2){184 + (x - 1) * 93, 18}, 59, 0, UI_GRNEEN_LGT);
     }
     
     //MFD left row buttons
