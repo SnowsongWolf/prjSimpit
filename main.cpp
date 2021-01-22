@@ -66,6 +66,11 @@ int main()
     //BeginTextureMode(tgt);
 
     DrawRectangleLines(99,99,602,602,UI_LINE);      // Display area
+    Rectangle dArea = (Rectangle){100,100,600,600};
+    Padding pfont = (Padding){4,0,-6,-6};
+    textAlign(font, "TOP LEFT", dArea, 50, 0, UI_BOX_LGT, pfont, A_LEFT, V_TOP);
+    textAlign(font, "CENTER", dArea, 50, 0, UI_BOX_LGT, pfont, A_CENTER, V_CENTER);
+    textAlign(font, "BOTTOM RIGHT", dArea, 50, 0, UI_BOX_LGT, pfont, A_RIGHT, V_BOTTOM);
 
     // MFD top row buttons
     DrawRectangleRoundedLines((Rectangle){184,18,59,59},0.1f,0,1,UI_BOX_LGT);
