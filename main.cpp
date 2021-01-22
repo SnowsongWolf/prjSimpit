@@ -73,11 +73,10 @@ int main()
     DrawRectangleRoundedLines((Rectangle){464,18,59,59},0.1f,0,1,UI_BOX_LGT);
     DrawRectangleRoundedLines((Rectangle){556,18,59,59},0.1f,0,1,UI_BOX_LGT);
         
-    char* ch_x = {0};
+    char ch_x;
     for (int x = 1; x < 6; x++)
     {
-        //sprintf(ch_x,"%d",x);
-        itoa(x,ch_x,10);
+        sprintf(ch_x,"%d",x);
         DrawTextEx(font, ch_x,(Vector2){202 + (x - 1) * 93, 18}, 59, 0, UI_GREEN_LGT);
     }
     
