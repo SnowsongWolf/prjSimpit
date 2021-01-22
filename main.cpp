@@ -73,8 +73,12 @@ int main()
     DrawRectangleRoundedLines((Rectangle){464,18,59,59},0.1f,0,1,UI_BOX_LGT);
     DrawRectangleRoundedLines((Rectangle){556,18,59,59},0.1f,0,1,UI_BOX_LGT);
         
+    char ch_x[3] = {0};
     for (int x = 1; x < 6; x++)
+    {
+        sprintf(ch_x,"%i",x);
         DrawTextEx(font, x.c_str(),(Vector2){184 + (x - 1) * 93, 18}, 59, 0, UI_GRNEEN_LGT);
+    }
     
     //MFD left row buttons
     DrawRectangleRoundedLines((Rectangle){18,200,59,59},0.1f,0,1,UI_BOX_LGT);
