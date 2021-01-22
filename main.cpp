@@ -110,9 +110,7 @@ int main()
 
     DrawTextEx(font, "0.76", (Vector2){848.0f, 110.0f}, 36, 0, UI_LINE_LGT);
 
-    string strTest = "D";
-    DrawRectangleV((Vector2){200,200},MeasureTextEx(font, (char*)strTest.c_str(), 100, 0),UI_GREEN_LGT);
-    DrawTextEx(font, (char*)strTest.c_str(), (Vector2){200.0f,200.0f}, 100, 0, UI_BKG);
+    DrawRectangleRoundedLines((Rectangle){200,200,100,50}, 0.2f, 0, UI_LINE_THIN, UI_RED);
 
     EndTextureMode();
 
