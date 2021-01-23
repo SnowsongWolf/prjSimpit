@@ -111,15 +111,15 @@ int main()
 
     //MFD bottom column buttons
     DrawRectangleRoundedLines((Rectangle){184,723,59,59},0.1f,0,1,UI_BOX_LGT);
-    textAlign(font, "11", (Rectangle){184,723,59,59}, 50, 0, UI_GREEN_LGT, pfont);
+    textAlign(font, "15", (Rectangle){184,723,59,59}, 50, 0, UI_GREEN_LGT, pfont);
     DrawRectangleRoundedLines((Rectangle){277,723,59,59},0.1f,0,1,UI_BOX_LGT);
-    textAlign(font, "12", (Rectangle){277,723,59,59}, 50, 0, UI_GREEN_LGT, pfont);
+    textAlign(font, "14", (Rectangle){277,723,59,59}, 50, 0, UI_GREEN_LGT, pfont);
     DrawRectangleRoundedLines((Rectangle){370,723,59,59},0.1f,0,1,UI_BOX_LGT);
     textAlign(font, "13", (Rectangle){370,723,59,59}, 50, 0, UI_GREEN_LGT, pfont);
     DrawRectangleRoundedLines((Rectangle){464,723,59,59},0.1f,0,1,UI_BOX_LGT);
-    textAlign(font, "14", (Rectangle){464,723,59,59}, 50, 0, UI_GREEN_LGT, pfont);
+    textAlign(font, "12", (Rectangle){464,723,59,59}, 50, 0, UI_GREEN_LGT, pfont);
     DrawRectangleRoundedLines((Rectangle){556,723,59,59},0.1f,0,1,UI_BOX_LGT);
-    textAlign(font, "15", (Rectangle){556,723,59,59}, 50, 0, UI_GREEN_LGT, pfont);
+    textAlign(font, "11", (Rectangle){556,723,59,59}, 50, 0, UI_GREEN_LGT, pfont);
 
     /*for (int x = 11; x < 16; x++)
     {
