@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1611346589 source:/home/pi/cpp/prjSimpit/main.cpp
+1611434395 source:/home/pi/cpp/prjSimpit/main.cpp
 	<stdio.h>
 	<unistd.h>
 	<fcntl.h>
@@ -31,6 +31,6 @@
 	<termios.h>
 	"raylib.h"
 
-1611345676 source:/home/pi/cpp/prjSimpit/ui.cpp
+1611347257 source:/home/pi/cpp/prjSimpit/ui.cpp
 	"ui.h"
 

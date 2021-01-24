@@ -17,7 +17,7 @@ void dPrintln(string strPrint);
 
 int main()
 {
-    int screenWidth = 1280;
+    int screenWidth = 1280 * 2;
     int screenHeight = 800;
 
     bool serConn = initSerial();
@@ -32,9 +32,15 @@ int main()
 
     SetConfigFlags(FLAG_WINDOW_UNDECORATED | FLAG_MSAA_4X_HINT);
 
+    SetTraceLogLevel(LOG_ALL);
+
+    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
     InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
     MaximizeWindow();
     HideCursor();
+    printf("Monitors detected: %i\n\r",GetMonitorCount());
+    printf("Monitor size: %ix%i\n\r",GetMonitorWidth(2),GetMonitorHeight(2));
+    printf("Monitor physical size: %ix%i\n\r",GetMonitorPhysicalWidth(7),GetMonitorPhysicalHeight(7));
 
     SetTargetFPS(60);
     //sh = LoadShader(0, "resources/shaders/glsl100/bloom.fs");
@@ -169,6 +175,11 @@ int main()
     //DrawFPS(10,10);
 
     EndDrawing();
+
+    /*BeginDrawing(1);
+    ClearBackground(RAYWHITE);
+    DrawText("Congrats! You created your SECOND window!", 190, 200, 20, BLACK);
+    EndDrawing();*/
     }
     TakeScreenshot("./Template.png");
     //sleep(10);
