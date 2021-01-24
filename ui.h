@@ -24,3 +24,5 @@ void textAlign(Font t_font, string strText, Rectangle t_area, float t_size, floa
 
 void textAlign(Font t_font, string strText, Vector2 t_point, float t_size, float t_spacing, Color t_color,
              Padding t_padding = PADDING_NONE, Align al = A_CENTER, VAlign val = V_CENTER);
+
+void uiTemplate(Vector2 ui_origin, Font font);
