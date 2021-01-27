@@ -136,11 +136,30 @@ void btnLabel(uint8_t btn, string label, Style stlLabel, Vector2 drawOffset, BSt
     VAlign lblVAlign = V_TOP;
     Rectangle recBtn = (Rectangle){0,0,0,0};
     switch (btn) {
+        case 6 ... 10:
+            recBtn.x = drawOffset.x + 460;
+            recBtn.y = drawOffset.y + (btn - 6) * 85.5f + 115;
+            recBtn.width = 140;
+            recBtn.height = 30;
+
+            if (!useText) {
+                recBtn.x = drawOffset.x + 570;
+                recBtn.width = 30;
+            }
+
+            lblAlign = A_RIGHT;
+            lblVAlign = V_CENTER;
+            break;
+
         case 16 ... 20:
             recBtn.x = drawOffset.x;
             recBtn.y = drawOffset.y + (20 - btn) * 85.5f + 115;
             recBtn.width = 140;
             recBtn.height = 30;
+
+            if (!useText)
+                recBtn.width = 30;
+
             lblAlign = A_LEFT;
             lblVAlign = V_CENTER;
             break;
@@ -148,6 +167,8 @@ void btnLabel(uint8_t btn, string label, Style stlLabel, Vector2 drawOffset, BSt
         default:
             break;
     }
+
+    printf("Draw rectangle is %f,%f %fx%f\n\r",recBtn.x, recBtn.y, recBtn.width, recBtn.height);
 
     // draw background
     DrawRectangleRec(recBtn,bkg);
@@ -158,6 +179,10 @@ void btnLabel(uint8_t btn, string label, Style stlLabel, Vector2 drawOffset, BSt
     // draw text/icon
     if (useText)
         textAlign(lblFont, label, recBtn, lblSize, lblSpacing, text, lblPadding, lblAlign, lblVAlign);
+    else
+        DrawTextureV(*icon, (Vector2){recBtn.x, recBtn.y}, text);
+
+    DrawTexture(*icon, 400, 400, WHITE);
 }
 
 void uiTemplate(Vector2 ui_origin, Font font) {

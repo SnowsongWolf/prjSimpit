@@ -94,6 +94,10 @@ int main()
     stylDefault.stkColor = UI_LINE_LGT;
     stylDefault.txtColor = UI_LINE_LGT;*/
 
+    Image image = LoadImage("resources/icons/ico_home.png");
+    Texture2D icoHome = LoadTextureFromImage(image);
+    UnloadImage(image);
+
     while(!WindowShouldClose() && !updateSerial())
     {
     BeginDrawing();
@@ -113,6 +117,10 @@ int main()
     //DrawTextureRec(tgt.texture, (Rectangle){0, 0, tgt.texture.width, -tgt.texture.height}, (Vector2){0, 0}, WHITE);
     //EndShaderMode();
     //DrawFPS(10,10);
+
+    btnLabel(6, "Do you want", stylDefault);
+    btnLabel(7, "Some more?", stylDefault);
+    btnLabel(8, "", stylDefault, MFCD_LEFT, B_NONE, &icoHome);
 
     btnLabel(17, "Hello", stylDefault);
     btnLabel(16, "World!", stylDefault);
