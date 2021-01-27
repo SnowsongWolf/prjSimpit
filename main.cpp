@@ -82,8 +82,8 @@ int main()
 
     Style stylDefault = (Style){ font, (Padding){8,0,-12,-12}, 0.0f,
                                 fnum, (Padding){0,0,0,0}, 0.0f,
-                                UI_LINE_LGT, UI_BOX, UI_LINE,
-                                UI_LINE_LGT, UI_BOX_LGT, UI_LINE_LGT,
+                                UI_LINE_LGT, UI_BOX_DRK, UI_LINE_LGT,
+                                UI_LINE_LGT, UI_BOX, UI_LINE_LGT,
                                 UI_LINE_LGT, UI_BOX, UI_GREEN_LGT,
                                 UI_LINE, UI_BOX_DRK, UI_LINE_DRK};
 
@@ -118,9 +118,21 @@ int main()
     //EndShaderMode();
     //DrawFPS(10,10);
 
+    btnLabel(1, "First!", stylDefault);
+    btnLabel(2, "Second!", stylDefault);
+    btnLabel(3, "", stylDefault, MFCD_LEFT, B_NONE, &icoHome);
+    btnLabel(4, "Fourth!", stylDefault);
+    btnLabel(5, "5!", stylDefault);
+
     btnLabel(6, "Do you want", stylDefault);
     btnLabel(7, "Some more?", stylDefault);
     btnLabel(8, "", stylDefault, MFCD_LEFT, B_NONE, &icoHome);
+
+    btnLabel(15, "Pre F", stylDefault);
+    btnLabel(14, "DSMS", stylDefault);
+    btnLabel(13, "Power", stylDefault);
+    btnLabel(12, "Fly", stylDefault);
+    btnLabel(11, "Drive", stylDefault);
 
     btnLabel(17, "Hello", stylDefault);
     btnLabel(16, "World!", stylDefault);

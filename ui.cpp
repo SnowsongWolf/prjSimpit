@@ -105,7 +105,7 @@ void btnLabel(uint8_t btn, string label, Style stlLabel, Vector2 drawOffset, BSt
             text = stlLabel.txtColor;
             bkg = stlLabel.bkgColor;
             stroke = stlLabel.stkColor;
-            printf("bState is NONE\n\r");
+            //printf("bState is NONE\n\r");
             break;
     }
 
@@ -114,11 +114,11 @@ void btnLabel(uint8_t btn, string label, Style stlLabel, Vector2 drawOffset, BSt
     bool useText = true;
     if (icon)
         useText = false;
-    printf("Use Text: ");
+    /*printf("Use Text: ");
     if (useText)
         printf("TRUE\n\r");
     else
-        printf("FALSE\n\r");
+        printf("FALSE\n\r");*/
 
     // calculate size adjusted padding
     Font lblFont = stlLabel.txtFont;
@@ -136,6 +136,23 @@ void btnLabel(uint8_t btn, string label, Style stlLabel, Vector2 drawOffset, BSt
     VAlign lblVAlign = V_TOP;
     Rectangle recBtn = (Rectangle){0,0,0,0};
     switch (btn) {
+        case 1 ... 5:
+            recBtn.x = drawOffset.x + (btn - 1) * 93 + 69;
+            printf("Button is %i\n\rLabel X is %f\n\r",btn,drawOffset.x + (btn - 1) * 93 + 169);
+            recBtn.y = drawOffset.y;
+            recBtn.width = 90;
+            recBtn.height = 30;
+
+            if (!useText) {
+                recBtn.x = drawOffset.x + (btn - 1) * 93 + 99;
+                recBtn.width = 30;
+                recBtn.height = 30;
+            }
+
+            lblVAlign = V_CENTER;
+            lblAlign = A_CENTER;
+            break;
+
         case 6 ... 10:
             recBtn.x = drawOffset.x + 460;
             recBtn.y = drawOffset.y + (btn - 6) * 85.5f + 115;
@@ -149,6 +166,22 @@ void btnLabel(uint8_t btn, string label, Style stlLabel, Vector2 drawOffset, BSt
 
             lblAlign = A_RIGHT;
             lblVAlign = V_CENTER;
+            break;
+
+        case 11 ... 15:
+            recBtn.x = drawOffset.x + (15 - btn) * 93 + 69;
+            recBtn.y = drawOffset.y + 570;
+            recBtn.width = 90;
+            recBtn.height = 30;
+
+            if (!useText) {
+                recBtn.x = drawOffset.x + (15 - btn) * 93 + 99;
+                recBtn.width = 30;
+                recBtn.height = 30;
+            }
+
+            lblVAlign = V_CENTER;
+            lblAlign = A_CENTER;
             break;
 
         case 16 ... 20:
@@ -182,7 +215,6 @@ void btnLabel(uint8_t btn, string label, Style stlLabel, Vector2 drawOffset, BSt
     else
         DrawTextureV(*icon, (Vector2){recBtn.x, recBtn.y}, text);
 
-    DrawTexture(*icon, 400, 400, WHITE);
 }
 
 void uiTemplate(Vector2 ui_origin, Font font) {
@@ -191,6 +223,7 @@ void uiTemplate(Vector2 ui_origin, Font font) {
     Padding pfont = (Padding){2,0,-6,-6};
 
     // MFD top row buttons
+    printf("Template X is %f",ui_origin.x + 184);
     DrawRectangleRoundedLines((Rectangle){ui_origin.x + 184,ui_origin.y + 18,59,59},0.1f,0,1,UI_BOX_LGT);
     textAlign(font, "1", (Rectangle){ui_origin.x + 184,ui_origin.y + 18,59,59}, 50, 0, UI_GREEN_LGT, pfont);
     DrawRectangleRoundedLines((Rectangle){ui_origin.x + 277,ui_origin.y + 18,59,59},0.1f,0,1,UI_BOX_LGT);
