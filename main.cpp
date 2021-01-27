@@ -138,7 +138,7 @@ int main()
     btnLabel(16, "World!", stylDefault);
 
     btnLabel(17, "Konnichi-wa", stylDefault, MFCD_RIGHT);
-    btnLabel(16, "Warldo!", stylDefault, MFCD_RIGHT);
+    btnLabel(16, "Sekai!", stylDefault, MFCD_RIGHT);
 
     EndDrawing();
 
