@@ -58,6 +58,19 @@ int main()
     font.texture = LoadTextureFromImage(atlas);
     UnloadImage(atlas);
     UnloadFileData(fileData);
+    GenTextureMipmaps(&font.texture);
+
+    fileSize = 0;
+    fileData = LoadFileData("resources/fonts/MigraineMachine-mL2aj.ttf", &fileSize);
+
+    Font fnum = {0};
+    fnum.baseSize = 50;
+    fnum.charsCount = 95;
+    fnum.chars = LoadFontData(fileData, fileSize, 50, 0, 0, FONT_DEFAULT);
+    atlas = GenImageFontAtlas(fnum.chars, &fnum.recs, 95, 50, 0, 1);
+    fnum.texture = LoadTextureFromImage(atlas);
+    UnloadImage(atlas);
+    UnloadFileData(fileData);
 
     //RenderTexture2D tgt = LoadRenderTexture(screenWidth, screenHeight);
     GenTextureMipmaps(&font.texture);
@@ -65,14 +78,30 @@ int main()
     //SetTextureFilter(font2.texture, FILTER_BILINEAR);
     //SetTextureFilter(tgt.texture, FILTER_BILINEAR);
 
+    Vector2 wo = (Vector2){100,100};
+
+    Style stylDefault = (Style){ font, (Padding){8,0,-12,-12}, 0.0f,
+                                fnum, (Padding){0,0,0,0}, 0.0f,
+                                UI_LINE_LGT, UI_BOX, UI_LINE,
+                                UI_LINE_LGT, UI_BOX_LGT, UI_LINE_LGT,
+                                UI_LINE_LGT, UI_BOX, UI_GREEN_LGT,
+                                UI_LINE, UI_BOX_DRK, UI_LINE_DRK};
+
+    /*stylDefault.txtFont = font;
+    stylDefault.txtPad = (Padding){8,0,-12,-12};
+    stylDefault.txtSpacing = 0.0f;
+    stylDefault.bkgColor = UI_BOX;
+    stylDefault.stkColor = UI_LINE_LGT;
+    stylDefault.txtColor = UI_LINE_LGT;*/
+
     while(!WindowShouldClose() && !updateSerial())
     {
     BeginDrawing();
     ClearBackground(BLACK);
     //BeginTextureMode(tgt);
 
-    uiTemplate((Vector2){0,0}, font);
-    uiTemplate((Vector2){1280,0}, font);
+    uiTemplate((Vector2){0,0}, fnum);
+    uiTemplate((Vector2){1280,0}, fnum);
 
     Padding pfont = (Padding){2,0,-6,-6};
     textAlign(font, "MFCD Left", (Rectangle){100,100,600,600}, 50, 0, UI_LINE_LGT, pfont);
@@ -85,6 +114,12 @@ int main()
     //EndShaderMode();
     //DrawFPS(10,10);
 
+    btnLabel(17, "Hello", stylDefault);
+    btnLabel(16, "World!", stylDefault);
+
+    btnLabel(17, "Konnichi-wa", stylDefault, MFCD_RIGHT);
+    btnLabel(16, "Warldo!", stylDefault, MFCD_RIGHT);
+
     EndDrawing();
 
     /*BeginDrawing(1);
@@ -92,7 +127,7 @@ int main()
     DrawText("Congrats! You created your SECOND window!", 190, 200, 20, BLACK);
     EndDrawing();*/
     }
-    TakeScreenshot("./Template.png");
+    //TakeScreenshot("./Template.png");
     //sleep(10);
     //UnloadRenderTexture(tgt);
 

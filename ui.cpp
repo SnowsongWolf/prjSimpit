@@ -84,6 +84,82 @@ void textAlign(Font t_font, string strText, Vector2 t_point, float t_size, float
   DrawTextEx(t_font, (char*)strText.c_str(), origin, t_size, t_spacing, t_color);
 }
 
+void scalePadding(float scaleSize, Padding &scalePadding) {
+    // Scale padding assuming generated based on 100pt font
+    scalePadding.left = (int)((float)scalePadding.left / 100.0f * scaleSize);
+    scalePadding.right = (int)((float)scalePadding.right / 100.0f * scaleSize);
+    scalePadding.top = (int)((float)scalePadding.top / 100.0f * scaleSize);
+    scalePadding.bottom = (int)((float)scalePadding.bottom / 100.0f * scaleSize);
+}
+
+void btnLabel(uint8_t btn, string label, Style stlLabel, Vector2 drawOffset, BState bState, Texture2D *icon) {
+
+    Color text;
+    Color bkg;
+    Color stroke;
+
+    // select colors
+    switch (bState) {
+
+        default:                        // bState NONE
+            text = stlLabel.txtColor;
+            bkg = stlLabel.bkgColor;
+            stroke = stlLabel.stkColor;
+            printf("bState is NONE\n\r");
+            break;
+    }
+
+    // select font/icon
+    printf ("Icon: %i\n\r", icon);
+    bool useText = true;
+    if (icon)
+        useText = false;
+    printf("Use Text: ");
+    if (useText)
+        printf("TRUE\n\r");
+    else
+        printf("FALSE\n\r");
+
+    // calculate size adjusted padding
+    Font lblFont = stlLabel.txtFont;
+    float lblSpacing = stlLabel.txtSpacing;
+    Padding lblPadding = stlLabel.txtPad;
+    scalePadding(FSIZE, lblPadding);
+
+    // calculate size adjusted font size
+    float lblSize = FSIZE;
+    if (useText)
+        lblSize *= lblSize / (FSIZE + lblPadding.top + lblPadding.bottom);
+
+    // find position
+    Align lblAlign = A_RIGHT;
+    VAlign lblVAlign = V_TOP;
+    Rectangle recBtn = (Rectangle){0,0,0,0};
+    switch (btn) {
+        case 16 ... 20:
+            recBtn.x = drawOffset.x;
+            recBtn.y = drawOffset.y + (20 - btn) * 85.5f + 115;
+            recBtn.width = 140;
+            recBtn.height = 30;
+            lblAlign = A_LEFT;
+            lblVAlign = V_CENTER;
+            break;
+
+        default:
+            break;
+    }
+
+    // draw background
+    DrawRectangleRec(recBtn,bkg);
+
+    // draw stroke
+    DrawRectangleLinesEx(recBtn, 1, stroke);
+
+    // draw text/icon
+    if (useText)
+        textAlign(lblFont, label, recBtn, lblSize, lblSpacing, text, lblPadding, lblAlign, lblVAlign);
+}
+
 void uiTemplate(Vector2 ui_origin, Font font) {
     DrawRectangleLines(ui_origin.x + 99,ui_origin.y + 99,602,602,UI_LINE);      // Display area
     Rectangle dArea = (Rectangle){ui_origin.x + 100,ui_origin.y + 100,600,600};
