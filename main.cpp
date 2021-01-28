@@ -82,10 +82,10 @@ int main()
 
     Style stylDefault = (Style){ font, (Padding){8,0,-12,-12}, 0.0f,
                                 fnum, (Padding){0,0,0,0}, 0.0f,
-                                UI_LINE_LGT, UI_BOX_DRK, UI_LINE_LGT,
-                                UI_LINE_LGT, UI_BOX, UI_LINE_LGT,
+                                UI_LINE_LGT, UI_BOX_DRK, UI_LINE,
+                                UI_LINE_DRK, UI_BOX_LGT, UI_LINE_LGT,
                                 UI_LINE_LGT, UI_BOX, UI_GREEN_LGT,
-                                UI_LINE, UI_BOX_DRK, UI_LINE_DRK};
+                                UI_LINE, UI_BKG, UI_LINE_DRK};
 
     /*stylDefault.txtFont = font;
     stylDefault.txtPad = (Padding){8,0,-12,-12};
@@ -108,8 +108,8 @@ int main()
     uiTemplate((Vector2){1280,0}, fnum);
 
     Padding pfont = (Padding){2,0,-6,-6};
-    textAlign(font, "MFCD Left", (Rectangle){100,100,600,600}, 50, 0, UI_LINE_LGT, pfont);
-    textAlign(font, "MFCD Right", (Rectangle){1380,100,600,600}, 50, 0, UI_LINE_LGT, pfont);
+    //textAlign(font, "MFCD Left", (Rectangle){100,100,600,600}, 50, 0, UI_LINE_LGT, pfont);
+    //textAlign(font, "MFCD Right", (Rectangle){1380,100,600,600}, 50, 0, UI_LINE_LGT, pfont);
 
     //EndTextureMode();
 
@@ -118,27 +118,38 @@ int main()
     //EndShaderMode();
     //DrawFPS(10,10);
 
-    btnLabel(1, "First!", stylDefault);
+    /*btnLabel(1, "First!", stylDefault);
     btnLabel(2, "Second!", stylDefault);
     btnLabel(3, "", stylDefault, MFCD_LEFT, B_NONE, &icoHome);
     btnLabel(4, "Fourth!", stylDefault);
-    btnLabel(5, "5!", stylDefault);
+    btnLabel(5, "5!", stylDefault);*/
 
-    btnLabel(6, "Do you want", stylDefault);
+    btnLabel(20, "Sel Ship", stylDefault);
+    btnLabel(19, "Retrieve", stylDefault);
+    btnLabel(18, "Add New", stylDefault);
+    btnLabel(17, "Power", stylDefault);
+    btnLabel(16, "Ext Lights", stylDefault);
+    btnLabel(6, "Ext Doors", stylDefault);
+    btnLabel(7, "LDG Gear", stylDefault);
+    btnLabel(8, "FGT Assist", stylDefault);
+    btnLabel(9, "VTOL", stylDefault, MFCD_LEFT, B_DIS);
+    btnLabel(10, "DSMS Edit", stylDefault, MFCD_LEFT, B_HI);
+
+    /*btnLabel(6, "Do you want", stylDefault);
     btnLabel(7, "Some more?", stylDefault);
-    btnLabel(8, "", stylDefault, MFCD_LEFT, B_NONE, &icoHome);
+    btnLabel(8, "", stylDefault, MFCD_LEFT, B_NONE, &icoHome);*/
 
-    btnLabel(15, "Pre F", stylDefault);
+    btnLabel(15, "Pre F", stylDefault, MFCD_LEFT, B_SEL);
     btnLabel(14, "DSMS", stylDefault);
     btnLabel(13, "Power", stylDefault);
     btnLabel(12, "Fly", stylDefault);
     btnLabel(11, "Drive", stylDefault);
 
-    btnLabel(17, "Hello", stylDefault);
+    /*btnLabel(17, "Hello", stylDefault);
     btnLabel(16, "World!", stylDefault);
 
     btnLabel(17, "Konnichi-wa", stylDefault, MFCD_RIGHT);
-    btnLabel(16, "Sekai!", stylDefault, MFCD_RIGHT);
+    btnLabel(16, "Sekai!", stylDefault, MFCD_RIGHT);*/
 
     EndDrawing();
 
