@@ -236,7 +236,7 @@ void btnLabel(uint8_t btn, string label, Style stlLabel, Vector2 drawOffset, BSt
 
 void uiTemplate(Vector2 ui_origin, Font font) {
     DrawRectangleRoundedLines((Rectangle){ui_origin.x + 99,ui_origin.y + 99,602,602}, 0.24, 0, 1, UI_LINE);      // Display area
-    Rectangle dArea = (Rectangle){ui_origin.x + 100,ui_origin.y + 100,600,600};
+    //Rectangle dArea = (Rectangle){ui_origin.x + 100,ui_origin.y + 100,600,600};
     Padding pfont = (Padding){2,0,-6,-6};
 
     // MFD top row buttons

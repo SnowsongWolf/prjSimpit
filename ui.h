@@ -40,6 +40,19 @@ struct Style {
     Color stkDisable;
 };
 
+struct Button {
+    uint8_t btnIndex;
+    uint8_t btnLabel;
+    Texture2D *btnIcon = nullptr;
+};
+
+struct Screen {
+    string scrName;
+    string btnName;
+    uint8_t btnIndex;
+    Button scrButton[24];
+};
+
 #define PADDING_NONE    (Padding){0,0,0,0}
 #define FSIZE           20.0f
 #define MFCD_LEFT       (Vector2){100,100}

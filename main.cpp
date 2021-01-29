@@ -15,6 +15,7 @@ const bool debug = true;
 bool init = false;
 bool serConn = false;
 int screenWidth = 1280 * 2;
+//int screenWidth = 1280;
 int screenHeight = 800;
 Font font = {0};
 Font fnum = {0};
@@ -33,8 +34,13 @@ string c0m[7] = {"Joy Left", "Joy Right", "Throttle", "Rudder", "Wheel", "MFCD L
 #define D_MLEFT     6
 #define D_MRIGHT    7
 
-enum btnState {BTN_UP = 0, BTN_DOWN = 1, BTN_PRESS = 2, BTN_LONG = 3};
-btnState Buttons[7][24];
+#define BTN_UP      0
+#define BTN_DOWN    1
+#define BTN_PRESS   2
+#define BTN_LONG    3
+
+//enum btnState {BTN_UP = 0, BTN_DOWN = 1, BTN_PRESS = 2, BTN_LONG = 3};
+uint8_t Buttons[7][24];
 
 void dPrint(string strPrint);
 void dPrintln(string strPrint);
@@ -62,7 +68,7 @@ int main()
                 dPrint(": Button ");
                 dPrintln(to_string(cmd[3]));
 
-                btnState bAction = BTN_UP;
+                uint8_t bAction = BTN_UP;
                 uint8_t device = (uint8_t)cmd[2];
                 uint8_t button = (uint8_t)cmd[3];
 
