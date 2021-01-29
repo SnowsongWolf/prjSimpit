@@ -32,21 +32,33 @@ bool updateSerial() {
   if (rxBytes <= 0)
     return false;
 
-    printf("Bytes received: %i | Data received: %i",rxBytes, (uint8_t)rxByte);
+  printf("Bytes received: %i | Data received: %i",rxBytes, (uint8_t)rxByte);
 
   switch (rxByte) {
     case '\n':
-      printf(" | \\n detected.\n\r");
+      if ((uint8_t)strRx[0] > 13)
+        printf(" | \\n detected.\n\r");
+      else
+        strRx += rxByte;
       break;
 
     case '\r':
-      printf(" | \\r detected.\n\r");
+      if ((uint8_t)strRx[0] > 13) {
+        printf(" | \\r detected.\n\r");
+        return true;
+      }else
+        strRx += rxByte;
+      break;
+
+    case 0:
+      printf(" | data code 0 detected.\n\r");
       return true;
       break;
 
     default:
       strRx += rxByte;
-      printf(" | Character received: %c",rxByte);
+      if ((uint8_t)strRx[0] > 13)
+        printf(" | Character received: %c",rxByte);
   }
   printf("\n\r");
   return false;
@@ -63,6 +75,16 @@ bool txSerial(string strTx) {
         return false;
 
     write(uart0_filestream, (char*)strTx.c_str(), strTx.length());
+    return true;
+}
+
+bool txData(uint8_t *tx[]) {
+    if (uart0_filestream == -1)
+        return false;
+
+    write(uart0_filestream, *tx, sizeof(*tx));
+    write(uart0_filestream, "\n", sizeof(char));
+    write(uart0_filestream, "\r", sizeof(char));
     return true;
 }
 

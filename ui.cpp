@@ -127,7 +127,7 @@ void btnLabel(uint8_t btn, string label, Style stlLabel, Vector2 drawOffset, BSt
     }
 
     // select font/icon
-    printf ("Icon: %i\n\r", icon);
+    //printf ("Icon: %i\n\r", icon);
     bool useText = true;
     if (icon)
         useText = false;
@@ -240,7 +240,7 @@ void uiTemplate(Vector2 ui_origin, Font font) {
     Padding pfont = (Padding){2,0,-6,-6};
 
     // MFD top row buttons
-    printf("Template X is %f",ui_origin.x + 184);
+    //printf("Template X is %f",ui_origin.x + 184);
     DrawRectangleRoundedLines((Rectangle){ui_origin.x + 184,ui_origin.y + 18,59,59},0.1f,0,1,UI_BOX_LGT);
     textAlign(font, "1", (Rectangle){ui_origin.x + 184,ui_origin.y + 18,59,59}, 50, 0, UI_GREEN_LGT, pfont);
     DrawRectangleRoundedLines((Rectangle){ui_origin.x + 277,ui_origin.y + 18,59,59},0.1f,0,1,UI_BOX_LGT);
