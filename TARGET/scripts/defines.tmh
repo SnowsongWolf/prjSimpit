@@ -173,134 +173,134 @@ short ASCE[256]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 					1048 + ASC_SHF,		//0x7d	} Closing brace
 					1053 + ASC_SHF,		//0x7e	~ Equivalency sign - tilde
 					1076,				//0x7F	delete
-					0,					//0x80	Ä &euro; Euro sign
+					0,					//0x80	‚Ç¨ &euro; Euro sign
 					0,					//0x81	
-					0,					//0x82	Ç &sbquo; Single low-9 quotation mark
-					0,					//0x83	É &fnof; Latin small letter f with hook
-					0,					//0x84	Ñ &bdquo; Double low-9 quotation mark
-					0,					//0x85	Ö &hellip; Horizontal ellipsis
-					0,					//0x86	Ü &dagger; Dagger
-					0,					//0x87	á &Dagger; Double dagger
-					0,					//0x88	à &circ; Modifier letter circumflex accent
-					0,					//0x89	â &permil; Per mille sign
-					0,					//0x8A	ä &Scaron; Latin capital letter S with caron
-					0,					//0x8B	ã &lsaquo; Single left-pointing angle quotation
-					0,					//0x8C	å &OElig; Latin capital ligature OE
+					0,					//0x82	‚Äö &sbquo; Single low-9 quotation mark
+					0,					//0x83	∆í &fnof; Latin small letter f with hook
+					0,					//0x84	‚Äû &bdquo; Double low-9 quotation mark
+					0,					//0x85	‚Ä¶ &hellip; Horizontal ellipsis
+					0,					//0x86	‚Ä† &dagger; Dagger
+					0,					//0x87	‚Ä° &Dagger; Double dagger
+					0,					//0x88	ÀÜ &circ; Modifier letter circumflex accent
+					0,					//0x89	‚Ä∞ &permil; Per mille sign
+					0,					//0x8A	≈† &Scaron; Latin capital letter S with caron
+					0,					//0x8B	‚Äπ &lsaquo; Single left-pointing angle quotation
+					0,					//0x8C	≈í &OElig; Latin capital ligature OE
 					0,					//0x8D	
-					0,					//0x8E	é Latin captial letter Z with caron
+					0,					//0x8E	≈Ω Latin captial letter Z with caron
 					0,					//0x8F	
 					0,					//0x90	
-					0,					//0x91	ë &lsquo; Left single quotation mark
-					0,					//0x92	í &rsquo; Right single quotation mark
-					0,					//0x93	ì &ldquo; Left double quotation mark
-					0,					//0x94	î &rdquo; Right double quotation mark
-					0,					//0x95	ï &bull; Bullet
-					0,					//0x96	ñ &ndash; En dash
-					0,					//0x97	ó &mdash; Em dash
-					0,					//0x98	ò &tilde; Small tilde
-					0,					//0x99	ô &trade; Trade mark sign
-					0,					//0x9A	ö &scaron; Latin small letter S with caron
-					0,					//0x9B	õ &rsaquo; Single right-pointing angle quotation mark
-					0,					//0x9C	ú &oelig; Latin small ligature oe
+					0,					//0x91	‚Äò &lsquo; Left single quotation mark
+					0,					//0x92	‚Äô &rsquo; Right single quotation mark
+					0,					//0x93	‚Äú &ldquo; Left double quotation mark
+					0,					//0x94	‚Äù &rdquo; Right double quotation mark
+					0,					//0x95	‚Ä¢ &bull; Bullet
+					0,					//0x96	‚Äì &ndash; En dash
+					0,					//0x97	‚Äî &mdash; Em dash
+					0,					//0x98	Àú &tilde; Small tilde
+					0,					//0x99	‚Ñ¢ &trade; Trade mark sign
+					0,					//0x9A	≈° &scaron; Latin small letter S with caron
+					0,					//0x9B	‚Ä∫ &rsaquo; Single right-pointing angle quotation mark
+					0,					//0x9C	≈ì &oelig; Latin small ligature oe
 					0,					//0x9D
-					0,					//0x9E	û Latin small letter z with caron
-					0,					//0x9F	ü &yuml; Latin capital letter Y with diaeresis
+					0,					//0x9E	≈æ Latin small letter z with caron
+					0,					//0x9F	≈∏ &yuml; Latin capital letter Y with diaeresis
 					0,					//0xA0	  &nbsp; Non-breaking space
-					0,					//0xA1	° &iexcl; Inverted exclamation mark
-					0,					//0xA2	¢ &cent; Cent sign
-					0,					//0xA3	£ &pound; Pound sign
-					0,					//0xA4	§ &curren; Currency sign
-					0,					//0xA5	• &yen; Yen sign
-					0,					//0xA6	¶ &brvbar; Pipe, Broken vertical bar
-					0,					//0xA7	ß &sect; Section sign
-					0,					//0xA8	® &uml; Spacing diaeresis - umlaut
-					0,					//0xA9	© &copy; Copyright sign
-					0,					//0xAA	™ &ordf; Feminine ordinal indicator
-					0,					//0xAB	´ &laquo; Left double angle quotes
-					0,					//0xAC	¨ &not; Not sign
+					0,					//0xA1	¬° &iexcl; Inverted exclamation mark
+					0,					//0xA2	¬¢ &cent; Cent sign
+					0,					//0xA3	¬£ &pound; Pound sign
+					0,					//0xA4	¬§ &curren; Currency sign
+					0,					//0xA5	¬• &yen; Yen sign
+					0,					//0xA6	¬¶ &brvbar; Pipe, Broken vertical bar
+					0,					//0xA7	¬ß &sect; Section sign
+					0,					//0xA8	¬® &uml; Spacing diaeresis - umlaut
+					0,					//0xA9	¬© &copy; Copyright sign
+					0,					//0xAA	¬™ &ordf; Feminine ordinal indicator
+					0,					//0xAB	¬´ &laquo; Left double angle quotes
+					0,					//0xAC	¬¨ &not; Not sign
 					0,					//0xAD	  &shy; Soft hyphen
-					0,					//0xAE	Æ &reg; Registered trade mark sign
-					0,					//0xAF	Ø &macr; Spacing macron - overline
-					0,					//0xB0	∞ &deg; Degree sign
-					0,					//0xB1	± &plusmn; Plus-or-minus sign
-					0,					//0xB2	≤ &sup2; Superscript two - squared
-					0,					//0xB3	≥ &sup3; Superscript three - cubed
-					0,					//0xB4	¥ &acute; Acute accent - spacing acute
-					0,					//0xB5	µ &micro; Micro sign
-					0,					//0xB6	∂ &para; Pilcrow sign - paragraph sign
-					0,					//0xB7	∑ &middot; Middle dot - Georgian comma
-					0,					//0xB8	∏ &cedil; Spacing cedilla
-					0,					//0xB9	π &sup1; Superscript one
-					0,					//0xBA	∫ &ordm; Masculine ordinal indicator
-					0,					//0xBB	ª &raquo; Right double angle quotes
-					0,					//0xBC	º &frac14; Fraction one quarter
-					0,					//0xBD	Ω &frac12; Fraction one half
-					0,					//0xBE	æ &frac34; Fraction three quarters
-					0,					//0xBF	ø &iquest; Inverted question mark
-					0,					//0xC0	¿ &Agrave; Latin capital letter A with grave
-					0,					//0xC1	¡ &Aacute; Latin capital letter A with acute
-					0,					//0xC2	¬ &Acirc; Latin capital letter A with circumflex
-					0,					//0xC3	√ &Atilde; Latin capital letter A with tilde
-					0,					//0xC4	ƒ &Auml; Latin capital letter A with diaeresis
-					0,					//0xC5	≈ &Aring; Latin capital letter A with ring above
-					0,					//0xC6	∆ &AElig; Latin capital letter AE
-					0,					//0xC7	« &Ccedil; Latin capital letter C with cedilla
-					0,					//0xC8	» &Egrave; Latin capital letter E with grave
-					0,					//0xC9	… &Eacute; Latin capital letter E with acute
-					0,					//0xCA	  &Ecirc; Latin capital letter E with circumflex
-					0,					//0xCB	À &Euml; Latin capital letter E with diaeresis
-					0,					//0xCC	Ã &Igrave; Latin capital letter I with grave
-					0,					//0xCD	Õ &Iacute; Latin capital letter I with acute
-					0,					//0xCE	Œ &Icirc; Latin capital letter I with circumflex
-					0,					//0xCF	œ &Iuml; Latin capital letter I with diaeresis
-					0,					//0xD0	– &ETH; Latin capital letter ETH
-					0,					//0xD1	— &Ntilde; Latin capital letter N with tilde
-					0,					//0xD2	“ &Ograve; Latin capital letter O with grave
-					0,					//0xD3	” &Oacute; Latin capital letter O with acute
-					0,					//0xD4	‘ &Ocirc; Latin capital letter O with circumflex
-					0,					//0xD5	’ &Otilde; Latin capital letter O with tilde
-					0,					//0xD6	÷ &Ouml; Latin capital letter O with diaeresis
-					0,					//0xD7	◊ &times; Multiplication sign
-					0,					//0xD8	ÿ &Oslash; Latin capital letter O with slash
-					0,					//0xD9	Ÿ &Ugrave; Latin capital letter U with grave
-					0,					//0xDA	⁄ &Uacute; Latin capital letter U with acute
-					0,					//0xDB	€ &Ucirc; Latin capital letter U with circumflex
-					0,					//0xDC	‹ &Uuml; Latin capital letter U with diaeresis
-					0,					//0xDD	› &Yacute; Latin capital letter Y with acute
-					0,					//0xDE	ﬁ &THORN; Latin capital letter THORN
-					0,					//0xDF	ﬂ &szlig; Latin small letter sharp s - ess-zed
-					0,					//0xE0	‡ &agrave; Latin small letter a with grave
-					0,					//0xE1	· &aacute; Latin small letter a with acute
-					0,					//0xE2	‚ &acirc; Latin small letter a with circumflex
-					0,					//0xE3	„ &atilde; Latin small letter a with tilde
-					0,					//0xE4	‰ &auml; Latin small letter a with diaeresis
-					0,					//0xE5	Â &aring; Latin small letter a with ring above
-					0,					//0xE6	Ê &aelig; Latin small letter ae
-					0,					//0xE7	Á &ccedil; Latin small letter c with cedilla
-					0,					//0xE8	Ë &egrave; Latin small letter e with grave
-					0,					//0xE9	È &eacute; Latin small letter e with acute
-					0,					//0xEA	Í &ecirc; Latin small letter e with circumflex
-					0,					//0xEB	Î &euml; Latin small letter e with diaeresis
-					0,					//0xEC	Ï &igrave; Latin small letter i with grave
-					0,					//0xED	Ì &iacute; Latin small letter i with acute
-					0,					//0xEE	Ó &icirc; Latin small letter i with circumflex
-					0,					//0xEF	Ô &iuml; Latin small letter i with diaeresis
-					0,					//0xF0	 &eth; Latin small letter eth
-					0,					//0xF1	Ò &ntilde; Latin small letter n with tilde
-					0,					//0xF2	Ú &ograve; Latin small letter o with grave
-					0,					//0xF3	Û &oacute; Latin small letter o with acute
-					0,					//0xF4	Ù &ocirc; Latin small letter o with circumflex
-					0,					//0xF5	ı &otilde; Latin small letter o with tilde
-					0,					//0xF6	ˆ &ouml; Latin small letter o with diaeresis
-					0,					//0xF7	˜ &divide; Division sign
-					0,					//0xF8	¯ &oslash; Latin small letter o with slash
-					0,					//0xF9	˘ &ugrave; Latin small letter u with grave
-					0,					//0xFA	˙ &uacute; Latin small letter u with acute
-					0,					//0xFB	˚ &ucirc; Latin small letter u with circumflex
-					0,					//0xFC	¸ &uuml; Latin small letter u with diaeresis
-					0,					//0xFD	˝ &yacute; Latin small letter y with acute
-					0,					//0xFE	˛ &thorn; Latin small letter thorn
-					0					//0xFF	ˇ &yuml; Latin small letter y with diaeresis
+					0,					//0xAE	¬Æ &reg; Registered trade mark sign
+					0,					//0xAF	¬Ø &macr; Spacing macron - overline
+					0,					//0xB0	¬∞ &deg; Degree sign
+					0,					//0xB1	¬± &plusmn; Plus-or-minus sign
+					0,					//0xB2	¬≤ &sup2; Superscript two - squared
+					0,					//0xB3	¬≥ &sup3; Superscript three - cubed
+					0,					//0xB4	¬¥ &acute; Acute accent - spacing acute
+					0,					//0xB5	¬µ &micro; Micro sign
+					0,					//0xB6	¬∂ &para; Pilcrow sign - paragraph sign
+					0,					//0xB7	¬∑ &middot; Middle dot - Georgian comma
+					0,					//0xB8	¬∏ &cedil; Spacing cedilla
+					0,					//0xB9	¬π &sup1; Superscript one
+					0,					//0xBA	¬∫ &ordm; Masculine ordinal indicator
+					0,					//0xBB	¬ª &raquo; Right double angle quotes
+					0,					//0xBC	¬º &frac14; Fraction one quarter
+					0,					//0xBD	¬Ω &frac12; Fraction one half
+					0,					//0xBE	¬æ &frac34; Fraction three quarters
+					0,					//0xBF	¬ø &iquest; Inverted question mark
+					0,					//0xC0	√Ä &Agrave; Latin capital letter A with grave
+					0,					//0xC1	√Å &Aacute; Latin capital letter A with acute
+					0,					//0xC2	√Ç &Acirc; Latin capital letter A with circumflex
+					0,					//0xC3	√É &Atilde; Latin capital letter A with tilde
+					0,					//0xC4	√Ñ &Auml; Latin capital letter A with diaeresis
+					0,					//0xC5	√Ö &Aring; Latin capital letter A with ring above
+					0,					//0xC6	√Ü &AElig; Latin capital letter AE
+					0,					//0xC7	√á &Ccedil; Latin capital letter C with cedilla
+					0,					//0xC8	√à &Egrave; Latin capital letter E with grave
+					0,					//0xC9	√â &Eacute; Latin capital letter E with acute
+					0,					//0xCA	√ä &Ecirc; Latin capital letter E with circumflex
+					0,					//0xCB	√ã &Euml; Latin capital letter E with diaeresis
+					0,					//0xCC	√å &Igrave; Latin capital letter I with grave
+					0,					//0xCD	√ç &Iacute; Latin capital letter I with acute
+					0,					//0xCE	√é &Icirc; Latin capital letter I with circumflex
+					0,					//0xCF	√è &Iuml; Latin capital letter I with diaeresis
+					0,					//0xD0	√ê &ETH; Latin capital letter ETH
+					0,					//0xD1	√ë &Ntilde; Latin capital letter N with tilde
+					0,					//0xD2	√í &Ograve; Latin capital letter O with grave
+					0,					//0xD3	√ì &Oacute; Latin capital letter O with acute
+					0,					//0xD4	√î &Ocirc; Latin capital letter O with circumflex
+					0,					//0xD5	√ï &Otilde; Latin capital letter O with tilde
+					0,					//0xD6	√ñ &Ouml; Latin capital letter O with diaeresis
+					0,					//0xD7	√ó &times; Multiplication sign
+					0,					//0xD8	√ò &Oslash; Latin capital letter O with slash
+					0,					//0xD9	√ô &Ugrave; Latin capital letter U with grave
+					0,					//0xDA	√ö &Uacute; Latin capital letter U with acute
+					0,					//0xDB	√õ &Ucirc; Latin capital letter U with circumflex
+					0,					//0xDC	√ú &Uuml; Latin capital letter U with diaeresis
+					0,					//0xDD	√ù &Yacute; Latin capital letter Y with acute
+					0,					//0xDE	√û &THORN; Latin capital letter THORN
+					0,					//0xDF	√ü &szlig; Latin small letter sharp s - ess-zed
+					0,					//0xE0	√† &agrave; Latin small letter a with grave
+					0,					//0xE1	√° &aacute; Latin small letter a with acute
+					0,					//0xE2	√¢ &acirc; Latin small letter a with circumflex
+					0,					//0xE3	√£ &atilde; Latin small letter a with tilde
+					0,					//0xE4	√§ &auml; Latin small letter a with diaeresis
+					0,					//0xE5	√• &aring; Latin small letter a with ring above
+					0,					//0xE6	√¶ &aelig; Latin small letter ae
+					0,					//0xE7	√ß &ccedil; Latin small letter c with cedilla
+					0,					//0xE8	√® &egrave; Latin small letter e with grave
+					0,					//0xE9	√© &eacute; Latin small letter e with acute
+					0,					//0xEA	√™ &ecirc; Latin small letter e with circumflex
+					0,					//0xEB	√´ &euml; Latin small letter e with diaeresis
+					0,					//0xEC	√¨ &igrave; Latin small letter i with grave
+					0,					//0xED	√≠ &iacute; Latin small letter i with acute
+					0,					//0xEE	√Æ &icirc; Latin small letter i with circumflex
+					0,					//0xEF	√Ø &iuml; Latin small letter i with diaeresis
+					0,					//0xF0	√∞ &eth; Latin small letter eth
+					0,					//0xF1	√± &ntilde; Latin small letter n with tilde
+					0,					//0xF2	√≤ &ograve; Latin small letter o with grave
+					0,					//0xF3	√≥ &oacute; Latin small letter o with acute
+					0,					//0xF4	√¥ &ocirc; Latin small letter o with circumflex
+					0,					//0xF5	√µ &otilde; Latin small letter o with tilde
+					0,					//0xF6	√∂ &ouml; Latin small letter o with diaeresis
+					0,					//0xF7	√∑ &divide; Division sign
+					0,					//0xF8	√∏ &oslash; Latin small letter o with slash
+					0,					//0xF9	√π &ugrave; Latin small letter u with grave
+					0,					//0xFA	√∫ &uacute; Latin small letter u with acute
+					0,					//0xFB	√ª &ucirc; Latin small letter u with circumflex
+					0,					//0xFC	√º &uuml; Latin small letter u with diaeresis
+					0,					//0xFD	√Ω &yacute; Latin small letter y with acute
+					0,					//0xFE	√æ &thorn; Latin small letter thorn
+					0					//0xFF	√ø &yuml; Latin small letter y with diaeresis
 					};
 
 short ASCF[256]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -400,134 +400,134 @@ short ASCF[256]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 					1046 + ASC_AGR,		//0x7d	} Closing brace
 					1053 + ASC_SHF,		//0x7e	~ Equivalency sign - tilde
 					1076,				//0x7F	delete
-					1008 + ASC_AGR,		//0x80	Ä &euro; Euro sign
+					1008 + ASC_AGR,		//0x80	‚Ç¨ &euro; Euro sign
 					0,					//0x81	
-					0,					//0x82	Ç &sbquo; Single low-9 quotation mark
-					0,					//0x83	É &fnof; Latin small letter f with hook
-					0,					//0x84	Ñ &bdquo; Double low-9 quotation mark
-					0,					//0x85	Ö &hellip; Horizontal ellipsis
-					0,					//0x86	Ü &dagger; Dagger
-					0,					//0x87	á &Dagger; Double dagger
-					0,					//0x88	à &circ; Modifier letter circumflex accent
-					0,					//0x89	â &permil; Per mille sign
-					0,					//0x8A	ä &Scaron; Latin capital letter S with caron
-					0,					//0x8B	ã &lsaquo; Single left-pointing angle quotation
-					0,					//0x8C	å &OElig; Latin capital ligature OE
+					0,					//0x82	‚Äö &sbquo; Single low-9 quotation mark
+					0,					//0x83	∆í &fnof; Latin small letter f with hook
+					0,					//0x84	‚Äû &bdquo; Double low-9 quotation mark
+					0,					//0x85	‚Ä¶ &hellip; Horizontal ellipsis
+					0,					//0x86	‚Ä† &dagger; Dagger
+					0,					//0x87	‚Ä° &Dagger; Double dagger
+					0,					//0x88	ÀÜ &circ; Modifier letter circumflex accent
+					0,					//0x89	‚Ä∞ &permil; Per mille sign
+					0,					//0x8A	≈† &Scaron; Latin capital letter S with caron
+					0,					//0x8B	‚Äπ &lsaquo; Single left-pointing angle quotation
+					0,					//0x8C	≈í &OElig; Latin capital ligature OE
 					0,					//0x8D	
-					0,					//0x8E	é Latin captial letter Z with caron
+					0,					//0x8E	≈Ω Latin captial letter Z with caron
 					0,					//0x8F	
 					0,					//0x90	
-					0,					//0x91	ë &lsquo; Left single quotation mark
-					0,					//0x92	í &rsquo; Right single quotation mark
-					0,					//0x93	ì &ldquo; Left double quotation mark
-					0,					//0x94	î &rdquo; Right double quotation mark
-					0,					//0x95	ï &bull; Bullet
-					0,					//0x96	ñ &ndash; En dash
-					0,					//0x97	ó &mdash; Em dash
-					0,					//0x98	ò &tilde; Small tilde
-					0,					//0x99	ô &trade; Trade mark sign
-					0,					//0x9A	ö &scaron; Latin small letter S with caron
-					0,					//0x9B	õ &rsaquo; Single right-pointing angle quotation mark
-					0,					//0x9C	ú &oelig; Latin small ligature oe
+					0,					//0x91	‚Äò &lsquo; Left single quotation mark
+					0,					//0x92	‚Äô &rsquo; Right single quotation mark
+					0,					//0x93	‚Äú &ldquo; Left double quotation mark
+					0,					//0x94	‚Äù &rdquo; Right double quotation mark
+					0,					//0x95	‚Ä¢ &bull; Bullet
+					0,					//0x96	‚Äì &ndash; En dash
+					0,					//0x97	‚Äî &mdash; Em dash
+					0,					//0x98	Àú &tilde; Small tilde
+					0,					//0x99	‚Ñ¢ &trade; Trade mark sign
+					0,					//0x9A	≈° &scaron; Latin small letter S with caron
+					0,					//0x9B	‚Ä∫ &rsaquo; Single right-pointing angle quotation mark
+					0,					//0x9C	≈ì &oelig; Latin small ligature oe
 					0,					//0x9D
-					0,					//0x9E	û Latin small letter z with caron
-					0,					//0x9F	ü &yuml; Latin capital letter Y with diaeresis
+					0,					//0x9E	≈æ Latin small letter z with caron
+					0,					//0x9F	≈∏ &yuml; Latin capital letter Y with diaeresis
 					0,					//0xA0	  &nbsp; Non-breaking space
-					0,					//0xA1	° &iexcl; Inverted exclamation mark
-					0,					//0xA2	¢ &cent; Cent sign
-					1033 + ASC_SHF,		//0xA3	£ &pound; Pound sign
-					0,					//0xA4	§ &curren; Currency sign
-					0,					//0xA5	• &yen; Yen sign
-					0,					//0xA6	¶ &brvbar; Pipe, Broken vertical bar
-					1056 + ASC_SHF,		//0xA7	ß &sect; Section sign
-					0,					//0xA8	® &uml; Spacing diaeresis - umlaut
-					0,					//0xA9	© &copy; Copyright sign
-					0,					//0xAA	™ &ordf; Feminine ordinal indicator
-					0,					//0xAB	´ &laquo; Left double angle quotes
-					0,					//0xAC	¨ &not; Not sign
+					0,					//0xA1	¬° &iexcl; Inverted exclamation mark
+					0,					//0xA2	¬¢ &cent; Cent sign
+					1033 + ASC_SHF,		//0xA3	¬£ &pound; Pound sign
+					0,					//0xA4	¬§ &curren; Currency sign
+					0,					//0xA5	¬• &yen; Yen sign
+					0,					//0xA6	¬¶ &brvbar; Pipe, Broken vertical bar
+					1056 + ASC_SHF,		//0xA7	¬ß &sect; Section sign
+					0,					//0xA8	¬® &uml; Spacing diaeresis - umlaut
+					0,					//0xA9	¬© &copy; Copyright sign
+					0,					//0xAA	¬™ &ordf; Feminine ordinal indicator
+					0,					//0xAB	¬´ &laquo; Left double angle quotes
+					0,					//0xAC	¬¨ &not; Not sign
 					0,					//0xAD	  &shy; Soft hyphen
-					0,					//0xAE	Æ &reg; Registered trade mark sign
-					0,					//0xAF	Ø &macr; Spacing macron - overline
-					0,					//0xB0	∞ &deg; Degree sign
-					0,					//0xB1	± &plusmn; Plus-or-minus sign
-					1053,				//0xB2	≤ &sup2; Superscript two - squared
-					0,					//0xB3	≥ &sup3; Superscript three - cubed
-					0,					//0xB4	¥ &acute; Acute accent - spacing acute
-					1049 + ASC_SHF,		//0xB5	µ &micro; Micro sign
-					0,					//0xB6	∂ &para; Pilcrow sign - paragraph sign
-					0,					//0xB7	∑ &middot; Middle dot - Georgian comma
-					0,					//0xB8	∏ &cedil; Spacing cedilla
-					0,					//0xB9	π &sup1; Superscript one
-					0,					//0xBA	∫ &ordm; Masculine ordinal indicator
-					0,					//0xBB	ª &raquo; Right double angle quotes
-					0,					//0xBC	º &frac14; Fraction one quarter
-					0,					//0xBD	Ω &frac12; Fraction one half
-					0,					//0xBE	æ &frac34; Fraction three quarters
-					0,					//0xBF	ø &iquest; Inverted question mark
-					0,					//0xC0	¿ &Agrave; Latin capital letter A with grave
-					0,					//0xC1	¡ &Aacute; Latin capital letter A with acute
-					0,					//0xC2	¬ &Acirc; Latin capital letter A with circumflex
-					0,					//0xC3	√ &Atilde; Latin capital letter A with tilde
-					0,					//0xC4	ƒ &Auml; Latin capital letter A with diaeresis
-					0,					//0xC5	≈ &Aring; Latin capital letter A with ring above
-					0,					//0xC6	∆ &AElig; Latin capital letter AE
-					0,					//0xC7	« &Ccedil; Latin capital letter C with cedilla
-					0,					//0xC8	» &Egrave; Latin capital letter E with grave
-					0,					//0xC9	… &Eacute; Latin capital letter E with acute
-					0,					//0xCA	  &Ecirc; Latin capital letter E with circumflex
-					0,					//0xCB	À &Euml; Latin capital letter E with diaeresis
-					0,					//0xCC	Ã &Igrave; Latin capital letter I with grave
-					0,					//0xCD	Õ &Iacute; Latin capital letter I with acute
-					0,					//0xCE	Œ &Icirc; Latin capital letter I with circumflex
-					0,					//0xCF	œ &Iuml; Latin capital letter I with diaeresis
-					0,					//0xD0	– &ETH; Latin capital letter ETH
-					0,					//0xD1	— &Ntilde; Latin capital letter N with tilde
-					0,					//0xD2	“ &Ograve; Latin capital letter O with grave
-					0,					//0xD3	” &Oacute; Latin capital letter O with acute
-					0,					//0xD4	‘ &Ocirc; Latin capital letter O with circumflex
-					0,					//0xD5	’ &Otilde; Latin capital letter O with tilde
-					0,					//0xD6	÷ &Ouml; Latin capital letter O with diaeresis
-					0,					//0xD7	◊ &times; Multiplication sign
-					0,					//0xD8	ÿ &Oslash; Latin capital letter O with slash
-					0,					//0xD9	Ÿ &Ugrave; Latin capital letter U with grave
-					0,					//0xDA	⁄ &Uacute; Latin capital letter U with acute
-					0,					//0xDB	€ &Ucirc; Latin capital letter U with circumflex
-					0,					//0xDC	‹ &Uuml; Latin capital letter U with diaeresis
-					0,					//0xDD	› &Yacute; Latin capital letter Y with acute
-					0,					//0xDE	ﬁ &THORN; Latin capital letter THORN
-					0,					//0xDF	ﬂ &szlig; Latin small letter sharp s - ess-zed
-					1039,				//0xE0	‡ &agrave; Latin small letter a with grave
-					0,					//0xE1	· &aacute; Latin small letter a with acute
-					0,					//0xE2	‚ &acirc; Latin small letter a with circumflex
-					0,					//0xE3	„ &atilde; Latin small letter a with tilde
-					0,					//0xE4	‰ &auml; Latin small letter a with diaeresis
-					0,					//0xE5	Â &aring; Latin small letter a with ring above
-					0,					//0xE6	Ê &aelig; Latin small letter ae
-					1038,				//0xE7	Á &ccedil; Latin small letter c with cedilla
-					1036,				//0xE8	Ë &egrave; Latin small letter e with grave
-					1031,				//0xE9	È &eacute; Latin small letter e with acute
-					0,					//0xEA	Í &ecirc; Latin small letter e with circumflex
-					0,					//0xEB	Î &euml; Latin small letter e with diaeresis
-					0,					//0xEC	Ï &igrave; Latin small letter i with grave
-					0,					//0xED	Ì &iacute; Latin small letter i with acute
-					0,					//0xEE	Ó &icirc; Latin small letter i with circumflex
-					0,					//0xEF	Ô &iuml; Latin small letter i with diaeresis
-					0,					//0xF0	 &eth; Latin small letter eth
-					0,					//0xF1	Ò &ntilde; Latin small letter n with tilde
-					0,					//0xF2	Ú &ograve; Latin small letter o with grave
-					0,					//0xF3	Û &oacute; Latin small letter o with acute
-					0,					//0xF4	Ù &ocirc; Latin small letter o with circumflex
-					0,					//0xF5	ı &otilde; Latin small letter o with tilde
-					0,					//0xF6	ˆ &ouml; Latin small letter o with diaeresis
-					0,					//0xF7	˜ &divide; Division sign
-					0,					//0xF8	¯ &oslash; Latin small letter o with slash
-					1052,				//0xF9	˘ &ugrave; Latin small letter u with grave
-					0,					//0xFA	˙ &uacute; Latin small letter u with acute
-					0,					//0xFB	˚ &ucirc; Latin small letter u with circumflex
-					0,					//0xFC	¸ &uuml; Latin small letter u with diaeresis
-					0,					//0xFD	˝ &yacute; Latin small letter y with acute
-					0,					//0xFE	˛ &thorn; Latin small letter thorn
-					0					//0xFF	ˇ &yuml; Latin small letter y with diaeresis
+					0,					//0xAE	¬Æ &reg; Registered trade mark sign
+					0,					//0xAF	¬Ø &macr; Spacing macron - overline
+					0,					//0xB0	¬∞ &deg; Degree sign
+					0,					//0xB1	¬± &plusmn; Plus-or-minus sign
+					1053,				//0xB2	¬≤ &sup2; Superscript two - squared
+					0,					//0xB3	¬≥ &sup3; Superscript three - cubed
+					0,					//0xB4	¬¥ &acute; Acute accent - spacing acute
+					1049 + ASC_SHF,		//0xB5	¬µ &micro; Micro sign
+					0,					//0xB6	¬∂ &para; Pilcrow sign - paragraph sign
+					0,					//0xB7	¬∑ &middot; Middle dot - Georgian comma
+					0,					//0xB8	¬∏ &cedil; Spacing cedilla
+					0,					//0xB9	¬π &sup1; Superscript one
+					0,					//0xBA	¬∫ &ordm; Masculine ordinal indicator
+					0,					//0xBB	¬ª &raquo; Right double angle quotes
+					0,					//0xBC	¬º &frac14; Fraction one quarter
+					0,					//0xBD	¬Ω &frac12; Fraction one half
+					0,					//0xBE	¬æ &frac34; Fraction three quarters
+					0,					//0xBF	¬ø &iquest; Inverted question mark
+					0,					//0xC0	√Ä &Agrave; Latin capital letter A with grave
+					0,					//0xC1	√Å &Aacute; Latin capital letter A with acute
+					0,					//0xC2	√Ç &Acirc; Latin capital letter A with circumflex
+					0,					//0xC3	√É &Atilde; Latin capital letter A with tilde
+					0,					//0xC4	√Ñ &Auml; Latin capital letter A with diaeresis
+					0,					//0xC5	√Ö &Aring; Latin capital letter A with ring above
+					0,					//0xC6	√Ü &AElig; Latin capital letter AE
+					0,					//0xC7	√á &Ccedil; Latin capital letter C with cedilla
+					0,					//0xC8	√à &Egrave; Latin capital letter E with grave
+					0,					//0xC9	√â &Eacute; Latin capital letter E with acute
+					0,					//0xCA	√ä &Ecirc; Latin capital letter E with circumflex
+					0,					//0xCB	√ã &Euml; Latin capital letter E with diaeresis
+					0,					//0xCC	√å &Igrave; Latin capital letter I with grave
+					0,					//0xCD	√ç &Iacute; Latin capital letter I with acute
+					0,					//0xCE	√é &Icirc; Latin capital letter I with circumflex
+					0,					//0xCF	√è &Iuml; Latin capital letter I with diaeresis
+					0,					//0xD0	√ê &ETH; Latin capital letter ETH
+					0,					//0xD1	√ë &Ntilde; Latin capital letter N with tilde
+					0,					//0xD2	√í &Ograve; Latin capital letter O with grave
+					0,					//0xD3	√ì &Oacute; Latin capital letter O with acute
+					0,					//0xD4	√î &Ocirc; Latin capital letter O with circumflex
+					0,					//0xD5	√ï &Otilde; Latin capital letter O with tilde
+					0,					//0xD6	√ñ &Ouml; Latin capital letter O with diaeresis
+					0,					//0xD7	√ó &times; Multiplication sign
+					0,					//0xD8	√ò &Oslash; Latin capital letter O with slash
+					0,					//0xD9	√ô &Ugrave; Latin capital letter U with grave
+					0,					//0xDA	√ö &Uacute; Latin capital letter U with acute
+					0,					//0xDB	√õ &Ucirc; Latin capital letter U with circumflex
+					0,					//0xDC	√ú &Uuml; Latin capital letter U with diaeresis
+					0,					//0xDD	√ù &Yacute; Latin capital letter Y with acute
+					0,					//0xDE	√û &THORN; Latin capital letter THORN
+					0,					//0xDF	√ü &szlig; Latin small letter sharp s - ess-zed
+					1039,				//0xE0	√† &agrave; Latin small letter a with grave
+					0,					//0xE1	√° &aacute; Latin small letter a with acute
+					0,					//0xE2	√¢ &acirc; Latin small letter a with circumflex
+					0,					//0xE3	√£ &atilde; Latin small letter a with tilde
+					0,					//0xE4	√§ &auml; Latin small letter a with diaeresis
+					0,					//0xE5	√• &aring; Latin small letter a with ring above
+					0,					//0xE6	√¶ &aelig; Latin small letter ae
+					1038,				//0xE7	√ß &ccedil; Latin small letter c with cedilla
+					1036,				//0xE8	√® &egrave; Latin small letter e with grave
+					1031,				//0xE9	√© &eacute; Latin small letter e with acute
+					0,					//0xEA	√™ &ecirc; Latin small letter e with circumflex
+					0,					//0xEB	√´ &euml; Latin small letter e with diaeresis
+					0,					//0xEC	√¨ &igrave; Latin small letter i with grave
+					0,					//0xED	√≠ &iacute; Latin small letter i with acute
+					0,					//0xEE	√Æ &icirc; Latin small letter i with circumflex
+					0,					//0xEF	√Ø &iuml; Latin small letter i with diaeresis
+					0,					//0xF0	√∞ &eth; Latin small letter eth
+					0,					//0xF1	√± &ntilde; Latin small letter n with tilde
+					0,					//0xF2	√≤ &ograve; Latin small letter o with grave
+					0,					//0xF3	√≥ &oacute; Latin small letter o with acute
+					0,					//0xF4	√¥ &ocirc; Latin small letter o with circumflex
+					0,					//0xF5	√µ &otilde; Latin small letter o with tilde
+					0,					//0xF6	√∂ &ouml; Latin small letter o with diaeresis
+					0,					//0xF7	√∑ &divide; Division sign
+					0,					//0xF8	√∏ &oslash; Latin small letter o with slash
+					1052,				//0xF9	√π &ugrave; Latin small letter u with grave
+					0,					//0xFA	√∫ &uacute; Latin small letter u with acute
+					0,					//0xFB	√ª &ucirc; Latin small letter u with circumflex
+					0,					//0xFC	√º &uuml; Latin small letter u with diaeresis
+					0,					//0xFD	√Ω &yacute; Latin small letter y with acute
+					0,					//0xFE	√æ &thorn; Latin small letter thorn
+					0					//0xFF	√ø &yuml; Latin small letter y with diaeresis
 					};
 
 short ASCG[256]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -627,134 +627,134 @@ short ASCG[256]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 					1039 + ASC_AGR,		//0x7d	} Closing brace
 					1048 + ASC_AGR,		//0x7e	~ Equivalency sign - tilde
 					1076,				//0x7F	delete
-					1008 + ASC_AGR,		//0x80	Ä &euro; Euro sign
+					1008 + ASC_AGR,		//0x80	‚Ç¨ &euro; Euro sign
 					0,					//0x81	
-					0,					//0x82	Ç &sbquo; Single low-9 quotation mark
-					0,					//0x83	É &fnof; Latin small letter f with hook
-					0,					//0x84	Ñ &bdquo; Double low-9 quotation mark
-					0,					//0x85	Ö &hellip; Horizontal ellipsis
-					0,					//0x86	Ü &dagger; Dagger
-					0,					//0x87	á &Dagger; Double dagger
-					0,					//0x88	à &circ; Modifier letter circumflex accent
-					0,					//0x89	â &permil; Per mille sign
-					0,					//0x8A	ä &Scaron; Latin capital letter S with caron
-					0,					//0x8B	ã &lsaquo; Single left-pointing angle quotation
-					0,					//0x8C	å &OElig; Latin capital ligature OE
+					0,					//0x82	‚Äö &sbquo; Single low-9 quotation mark
+					0,					//0x83	∆í &fnof; Latin small letter f with hook
+					0,					//0x84	‚Äû &bdquo; Double low-9 quotation mark
+					0,					//0x85	‚Ä¶ &hellip; Horizontal ellipsis
+					0,					//0x86	‚Ä† &dagger; Dagger
+					0,					//0x87	‚Ä° &Dagger; Double dagger
+					0,					//0x88	ÀÜ &circ; Modifier letter circumflex accent
+					0,					//0x89	‚Ä∞ &permil; Per mille sign
+					0,					//0x8A	≈† &Scaron; Latin capital letter S with caron
+					0,					//0x8B	‚Äπ &lsaquo; Single left-pointing angle quotation
+					0,					//0x8C	≈í &OElig; Latin capital ligature OE
 					0,					//0x8D	
-					0,					//0x8E	é Latin captial letter Z with caron
+					0,					//0x8E	≈Ω Latin captial letter Z with caron
 					0,					//0x8F	
 					0,					//0x90	
-					0,					//0x91	ë &lsquo; Left single quotation mark
-					0,					//0x92	í &rsquo; Right single quotation mark
-					0,					//0x93	ì &ldquo; Left double quotation mark
-					0,					//0x94	î &rdquo; Right double quotation mark
-					0,					//0x95	ï &bull; Bullet
-					0,					//0x96	ñ &ndash; En dash
-					0,					//0x97	ó &mdash; Em dash
-					0,					//0x98	ò &tilde; Small tilde
-					0,					//0x99	ô &trade; Trade mark sign
-					0,					//0x9A	ö &scaron; Latin small letter S with caron
-					0,					//0x9B	õ &rsaquo; Single right-pointing angle quotation mark
-					0,					//0x9C	ú &oelig; Latin small ligature oe
+					0,					//0x91	‚Äò &lsquo; Left single quotation mark
+					0,					//0x92	‚Äô &rsquo; Right single quotation mark
+					0,					//0x93	‚Äú &ldquo; Left double quotation mark
+					0,					//0x94	‚Äù &rdquo; Right double quotation mark
+					0,					//0x95	‚Ä¢ &bull; Bullet
+					0,					//0x96	‚Äì &ndash; En dash
+					0,					//0x97	‚Äî &mdash; Em dash
+					0,					//0x98	Àú &tilde; Small tilde
+					0,					//0x99	‚Ñ¢ &trade; Trade mark sign
+					0,					//0x9A	≈° &scaron; Latin small letter S with caron
+					0,					//0x9B	‚Ä∫ &rsaquo; Single right-pointing angle quotation mark
+					0,					//0x9C	≈ì &oelig; Latin small ligature oe
 					0,					//0x9D
-					0,					//0x9E	û Latin small letter z with caron
-					0,					//0x9F	ü &yuml; Latin capital letter Y with diaeresis
+					0,					//0x9E	≈æ Latin small letter z with caron
+					0,					//0x9F	≈∏ &yuml; Latin capital letter Y with diaeresis
 					0,					//0xA0	  &nbsp; Non-breaking space
-					0,					//0xA1	° &iexcl; Inverted exclamation mark
-					0,					//0xA2	¢ &cent; Cent sign
-					0,					//0xA3	£ &pound; Pound sign
-					0,					//0xA4	§ &curren; Currency sign
-					0,					//0xA5	• &yen; Yen sign
-					0,					//0xA6	¶ &brvbar; Pipe, Broken vertical bar
-					1032 + ASC_SHF,		//0xA7	ß &sect; Section sign
-					0,					//0xA8	® &uml; Spacing diaeresis - umlaut
-					0,					//0xA9	© &copy; Copyright sign
-					0,					//0xAA	™ &ordf; Feminine ordinal indicator
-					0,					//0xAB	´ &laquo; Left double angle quotes
-					0,					//0xAC	¨ &not; Not sign
+					0,					//0xA1	¬° &iexcl; Inverted exclamation mark
+					0,					//0xA2	¬¢ &cent; Cent sign
+					0,					//0xA3	¬£ &pound; Pound sign
+					0,					//0xA4	¬§ &curren; Currency sign
+					0,					//0xA5	¬• &yen; Yen sign
+					0,					//0xA6	¬¶ &brvbar; Pipe, Broken vertical bar
+					1032 + ASC_SHF,		//0xA7	¬ß &sect; Section sign
+					0,					//0xA8	¬® &uml; Spacing diaeresis - umlaut
+					0,					//0xA9	¬© &copy; Copyright sign
+					0,					//0xAA	¬™ &ordf; Feminine ordinal indicator
+					0,					//0xAB	¬´ &laquo; Left double angle quotes
+					0,					//0xAC	¬¨ &not; Not sign
 					0,					//0xAD	  &shy; Soft hyphen
-					0,					//0xAE	Æ &reg; Registered trade mark sign
-					0,					//0xAF	Ø &macr; Spacing macron - overline
-					0,					//0xB0	∞ &deg; Degree sign
-					0,					//0xB1	± &plusmn; Plus-or-minus sign
-					1031 + ASC_AGR,		//0xB2	≤ &sup2; Superscript two - squared
-					1032 + ASC_AGR,		//0xB3	≥ &sup3; Superscript three - cubed
-					0,					//0xB4	¥ &acute; Acute accent - spacing acute
-					1016 + ASC_AGR,		//0xB5	µ &micro; Micro sign
-					0,					//0xB6	∂ &para; Pilcrow sign - paragraph sign
-					0,					//0xB7	∑ &middot; Middle dot - Georgian comma
-					0,					//0xB8	∏ &cedil; Spacing cedilla
-					0,					//0xB9	π &sup1; Superscript one
-					0,					//0xBA	∫ &ordm; Masculine ordinal indicator
-					0,					//0xBB	ª &raquo; Right double angle quotes
-					0,					//0xBC	º &frac14; Fraction one quarter
-					0,					//0xBD	Ω &frac12; Fraction one half
-					0,					//0xBE	æ &frac34; Fraction three quarters
-					0,					//0xBF	ø &iquest; Inverted question mark
-					0,					//0xC0	¿ &Agrave; Latin capital letter A with grave
-					0,					//0xC1	¡ &Aacute; Latin capital letter A with acute
-					0,					//0xC2	¬ &Acirc; Latin capital letter A with circumflex
-					0,					//0xC3	√ &Atilde; Latin capital letter A with tilde
-					1052 + ASC_SHF,		//0xC4	ƒ &Auml; Latin capital letter A with diaeresis
-					0,					//0xC5	≈ &Aring; Latin capital letter A with ring above
-					0,					//0xC6	∆ &AElig; Latin capital letter AE
-					0,					//0xC7	« &Ccedil; Latin capital letter C with cedilla
-					0,					//0xC8	» &Egrave; Latin capital letter E with grave
-					0,					//0xC9	… &Eacute; Latin capital letter E with acute
-					0,					//0xCA	  &Ecirc; Latin capital letter E with circumflex
-					0,					//0xCB	À &Euml; Latin capital letter E with diaeresis
-					0,					//0xCC	Ã &Igrave; Latin capital letter I with grave
-					0,					//0xCD	Õ &Iacute; Latin capital letter I with acute
-					0,					//0xCE	Œ &Icirc; Latin capital letter I with circumflex
-					0,					//0xCF	œ &Iuml; Latin capital letter I with diaeresis
-					0,					//0xD0	– &ETH; Latin capital letter ETH
-					0,					//0xD1	— &Ntilde; Latin capital letter N with tilde
-					0,					//0xD2	“ &Ograve; Latin capital letter O with grave
-					0,					//0xD3	” &Oacute; Latin capital letter O with acute
-					0,					//0xD4	‘ &Ocirc; Latin capital letter O with circumflex
-					0,					//0xD5	’ &Otilde; Latin capital letter O with tilde
-					1051 + ASC_SHF,		//0xD6	÷ &Ouml; Latin capital letter O with diaeresis
-					0,					//0xD7	◊ &times; Multiplication sign
-					0,					//0xD8	ÿ &Oslash; Latin capital letter O with slash
-					0,					//0xD9	Ÿ &Ugrave; Latin capital letter U with grave
-					0,					//0xDA	⁄ &Uacute; Latin capital letter U with acute
-					0,					//0xDB	€ &Ucirc; Latin capital letter U with circumflex
-					1047 + ASC_SHF,		//0xDC	‹ &Uuml; Latin capital letter U with diaeresis
-					0,					//0xDD	› &Yacute; Latin capital letter Y with acute
-					0,					//0xDE	ﬁ &THORN; Latin capital letter THORN
-					1045,				//0xDF	ﬂ &szlig; Latin small letter sharp s - ess-zed
-					0,					//0xE0	‡ &agrave; Latin small letter a with grave
-					0,					//0xE1	· &aacute; Latin small letter a with acute
-					0,					//0xE2	‚ &acirc; Latin small letter a with circumflex
-					0,					//0xE3	„ &atilde; Latin small letter a with tilde
-					1052,				//0xE4	‰ &auml; Latin small letter a with diaeresis
-					0,					//0xE5	Â &aring; Latin small letter a with ring above
-					0,					//0xE6	Ê &aelig; Latin small letter ae
-					0,					//0xE7	Á &ccedil; Latin small letter c with cedilla
-					0,					//0xE8	Ë &egrave; Latin small letter e with grave
-					0,					//0xE9	È &eacute; Latin small letter e with acute
-					0,					//0xEA	Í &ecirc; Latin small letter e with circumflex
-					0,					//0xEB	Î &euml; Latin small letter e with diaeresis
-					0,					//0xEC	Ï &igrave; Latin small letter i with grave
-					0,					//0xED	Ì &iacute; Latin small letter i with acute
-					0,					//0xEE	Ó &icirc; Latin small letter i with circumflex
-					0,					//0xEF	Ô &iuml; Latin small letter i with diaeresis
-					0,					//0xF0	 &eth; Latin small letter eth
-					0,					//0xF1	Ò &ntilde; Latin small letter n with tilde
-					0,					//0xF2	Ú &ograve; Latin small letter o with grave
-					0,					//0xF3	Û &oacute; Latin small letter o with acute
-					0,					//0xF4	Ù &ocirc; Latin small letter o with circumflex
-					0,					//0xF5	ı &otilde; Latin small letter o with tilde
-					1051,				//0xF6	ˆ &ouml; Latin small letter o with diaeresis
-					0,					//0xF7	˜ &divide; Division sign
-					0,					//0xF8	¯ &oslash; Latin small letter o with slash
-					0,					//0xF9	˘ &ugrave; Latin small letter u with grave
-					0,					//0xFA	˙ &uacute; Latin small letter u with acute
-					0,					//0xFB	˚ &ucirc; Latin small letter u with circumflex
-					1047,				//0xFC	¸ &uuml; Latin small letter u with diaeresis
-					0,					//0xFD	˝ &yacute; Latin small letter y with acute
-					0,					//0xFE	˛ &thorn; Latin small letter thorn
-					0					//0xFF	ˇ &yuml; Latin small letter y with diaeresis
+					0,					//0xAE	¬Æ &reg; Registered trade mark sign
+					0,					//0xAF	¬Ø &macr; Spacing macron - overline
+					0,					//0xB0	¬∞ &deg; Degree sign
+					0,					//0xB1	¬± &plusmn; Plus-or-minus sign
+					1031 + ASC_AGR,		//0xB2	¬≤ &sup2; Superscript two - squared
+					1032 + ASC_AGR,		//0xB3	¬≥ &sup3; Superscript three - cubed
+					0,					//0xB4	¬¥ &acute; Acute accent - spacing acute
+					1016 + ASC_AGR,		//0xB5	¬µ &micro; Micro sign
+					0,					//0xB6	¬∂ &para; Pilcrow sign - paragraph sign
+					0,					//0xB7	¬∑ &middot; Middle dot - Georgian comma
+					0,					//0xB8	¬∏ &cedil; Spacing cedilla
+					0,					//0xB9	¬π &sup1; Superscript one
+					0,					//0xBA	¬∫ &ordm; Masculine ordinal indicator
+					0,					//0xBB	¬ª &raquo; Right double angle quotes
+					0,					//0xBC	¬º &frac14; Fraction one quarter
+					0,					//0xBD	¬Ω &frac12; Fraction one half
+					0,					//0xBE	¬æ &frac34; Fraction three quarters
+					0,					//0xBF	¬ø &iquest; Inverted question mark
+					0,					//0xC0	√Ä &Agrave; Latin capital letter A with grave
+					0,					//0xC1	√Å &Aacute; Latin capital letter A with acute
+					0,					//0xC2	√Ç &Acirc; Latin capital letter A with circumflex
+					0,					//0xC3	√É &Atilde; Latin capital letter A with tilde
+					1052 + ASC_SHF,		//0xC4	√Ñ &Auml; Latin capital letter A with diaeresis
+					0,					//0xC5	√Ö &Aring; Latin capital letter A with ring above
+					0,					//0xC6	√Ü &AElig; Latin capital letter AE
+					0,					//0xC7	√á &Ccedil; Latin capital letter C with cedilla
+					0,					//0xC8	√à &Egrave; Latin capital letter E with grave
+					0,					//0xC9	√â &Eacute; Latin capital letter E with acute
+					0,					//0xCA	√ä &Ecirc; Latin capital letter E with circumflex
+					0,					//0xCB	√ã &Euml; Latin capital letter E with diaeresis
+					0,					//0xCC	√å &Igrave; Latin capital letter I with grave
+					0,					//0xCD	√ç &Iacute; Latin capital letter I with acute
+					0,					//0xCE	√é &Icirc; Latin capital letter I with circumflex
+					0,					//0xCF	√è &Iuml; Latin capital letter I with diaeresis
+					0,					//0xD0	√ê &ETH; Latin capital letter ETH
+					0,					//0xD1	√ë &Ntilde; Latin capital letter N with tilde
+					0,					//0xD2	√í &Ograve; Latin capital letter O with grave
+					0,					//0xD3	√ì &Oacute; Latin capital letter O with acute
+					0,					//0xD4	√î &Ocirc; Latin capital letter O with circumflex
+					0,					//0xD5	√ï &Otilde; Latin capital letter O with tilde
+					1051 + ASC_SHF,		//0xD6	√ñ &Ouml; Latin capital letter O with diaeresis
+					0,					//0xD7	√ó &times; Multiplication sign
+					0,					//0xD8	√ò &Oslash; Latin capital letter O with slash
+					0,					//0xD9	√ô &Ugrave; Latin capital letter U with grave
+					0,					//0xDA	√ö &Uacute; Latin capital letter U with acute
+					0,					//0xDB	√õ &Ucirc; Latin capital letter U with circumflex
+					1047 + ASC_SHF,		//0xDC	√ú &Uuml; Latin capital letter U with diaeresis
+					0,					//0xDD	√ù &Yacute; Latin capital letter Y with acute
+					0,					//0xDE	√û &THORN; Latin capital letter THORN
+					1045,				//0xDF	√ü &szlig; Latin small letter sharp s - ess-zed
+					0,					//0xE0	√† &agrave; Latin small letter a with grave
+					0,					//0xE1	√° &aacute; Latin small letter a with acute
+					0,					//0xE2	√¢ &acirc; Latin small letter a with circumflex
+					0,					//0xE3	√£ &atilde; Latin small letter a with tilde
+					1052,				//0xE4	√§ &auml; Latin small letter a with diaeresis
+					0,					//0xE5	√• &aring; Latin small letter a with ring above
+					0,					//0xE6	√¶ &aelig; Latin small letter ae
+					0,					//0xE7	√ß &ccedil; Latin small letter c with cedilla
+					0,					//0xE8	√® &egrave; Latin small letter e with grave
+					0,					//0xE9	√© &eacute; Latin small letter e with acute
+					0,					//0xEA	√™ &ecirc; Latin small letter e with circumflex
+					0,					//0xEB	√´ &euml; Latin small letter e with diaeresis
+					0,					//0xEC	√¨ &igrave; Latin small letter i with grave
+					0,					//0xED	√≠ &iacute; Latin small letter i with acute
+					0,					//0xEE	√Æ &icirc; Latin small letter i with circumflex
+					0,					//0xEF	√Ø &iuml; Latin small letter i with diaeresis
+					0,					//0xF0	√∞ &eth; Latin small letter eth
+					0,					//0xF1	√± &ntilde; Latin small letter n with tilde
+					0,					//0xF2	√≤ &ograve; Latin small letter o with grave
+					0,					//0xF3	√≥ &oacute; Latin small letter o with acute
+					0,					//0xF4	√¥ &ocirc; Latin small letter o with circumflex
+					0,					//0xF5	√µ &otilde; Latin small letter o with tilde
+					1051,				//0xF6	√∂ &ouml; Latin small letter o with diaeresis
+					0,					//0xF7	√∑ &divide; Division sign
+					0,					//0xF8	√∏ &oslash; Latin small letter o with slash
+					0,					//0xF9	√π &ugrave; Latin small letter u with grave
+					0,					//0xFA	√∫ &uacute; Latin small letter u with acute
+					0,					//0xFB	√ª &ucirc; Latin small letter u with circumflex
+					1047,				//0xFC	√º &uuml; Latin small letter u with diaeresis
+					0,					//0xFD	√Ω &yacute; Latin small letter y with acute
+					0,					//0xFE	√æ &thorn; Latin small letter thorn
+					0					//0xFF	√ø &yuml; Latin small letter y with diaeresis
 					};
 
 alias ASC = &ASCE;	// english keyboard layout as default
