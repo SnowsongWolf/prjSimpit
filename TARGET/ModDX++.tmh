@@ -1,0 +1,188 @@
+// -----------------------------------------------------------------------------
+//  Extend DX (DX++) Module for Thrustmaster TARGET
+// -----------------------------------------------------------------------------
+//  Extend DX (DX++) Module header
+//  Version:  1.2
+// -----------------------------------------------------------------------------
+//  Desc:
+//  Functions and definitions for the Extend DX Module. This module allow to 
+//  create and map a "Thrustmaster Combined" virtual device with more than 
+//  32 HID (DX) buttons.
+//
+//  Usage: 
+//  The standard TARGET implementation use a PlugGame() function to create a
+//  the "Thrustmaster Combined" virtual device. This function take a struct as
+//  parameter who defines the virtual device properties. The PlugGame() function
+//  is called within the Init() function declared in "target.tmh" file.
+//
+//  This module simply provides a function to modify the virtual device 
+//  definition struct - which is defined in the "target.tmh" file -  before it 
+//  is pased to the PlugGame() function.
+//
+//  I) Installation
+//
+//    - Include this file using the "include" keywork in your main
+//      tmc profile file AFTER the include of the standard target.tmh
+//      file.
+//
+//      example:
+//              include "target.tmh"
+//              include "modules/ModDX++.tmh"
+//
+//    - Within the main() function, you must call the InitMoreDX() INSTEAD of
+//      the normal Init() call, with the desired count of DX button as
+//      first parameter:
+//
+//      example: 
+//              int main()
+//              {
+//                if(InitMoreDX(64, &EventHandle, CREATE_JOYSTICK)) 
+//                  return 1;
+//              }
+//
+//  II) Using DX# macros
+//
+//    - The standard TARGET implementation allow only DX1 to DX32 macros to be
+//      mapped. The DX Extend Module allow you to use from DX1 to DX120. 
+//
+//      example: 
+//              MapKey(&Joystick, TG1,  DX119);
+//              MapKey(&Joystick, TG2,  DX120);
+//      
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// Global Defines 
+// -----------------------------------------------------------------------------
+
+// Additionnal defines for 120 DX buttons
+define DX33         3032
+define DX34         3033
+define DX35         3034
+define DX36         3035
+define DX37         3036
+define DX38         3037
+define DX39         3038
+define DX40         3039
+define DX41         3040
+define DX42         3041
+define DX43         3042
+define DX44         3043
+define DX45         3044
+define DX46         3045
+define DX47         3046
+define DX48         3047
+define DX49         3048
+define DX50         3049
+define DX51         3050
+define DX52         3051
+define DX53         3052
+define DX54         3053
+define DX55         3054
+define DX56         3055
+define DX57         3056
+define DX58         3057
+define DX59         3058
+define DX60         3059
+define DX61         3060
+define DX62         3061
+define DX63         3062
+define DX64         3063
+define DX65         3064
+define DX66         3065
+define DX67         3066
+define DX68         3067
+define DX69         3068
+define DX70         3069
+define DX71         3070
+define DX72         3071
+define DX73         3072
+define DX74         3073
+define DX75         3074
+define DX76         3075
+define DX77         3076
+define DX78         3077
+define DX79         3078
+define DX80         3079
+define DX81         3080
+define DX82         3081
+define DX83         3082
+define DX84         3083
+define DX85         3084
+define DX86         3085
+define DX87         3086
+define DX88         3087
+define DX89         3088
+define DX90         3089
+define DX91         3090
+define DX92         3091
+define DX93         3092
+define DX94         3093
+define DX95         3094
+define DX96         3095
+define DX97         3096
+define DX98         3097
+define DX99         3098
+define DX100        3099
+define DX101        3100
+define DX102        3101
+define DX103        3102
+define DX104        3103
+define DX105        3104
+define DX106        3105
+define DX107        3106
+define DX108        3107
+define DX109        3108
+define DX110        3109
+define DX111        3110
+define DX112        3111
+define DX113        3112
+define DX114        3113
+define DX115        3114
+define DX116        3115
+define DX117        3116
+define DX118        3117
+define DX119        3118
+define DX120        3119
+define DX_SLIDE1_AXIS 	8
+define DX_SLIDE2_AXIS 	9
+define DX_SLIDE3_AXIS 	10
+define DX_SLIDE4_AXIS 	11
+
+// -----------------------------------------------------------------------------
+// Public Functions
+// -----------------------------------------------------------------------------
+
+// Init() function replacement for extended DX support
+//
+// - param[in] n    Desired count of DX buttons for the "Thrustmaster Combined" 
+//                  virtual device.
+// - param[in] h    Alias to EventHandler function.
+// - param[in] cfg  Virtual device to create, any combination of CREATE_JOYSTICK, 
+//                  CREATE_KEYBOARD and CREATE_MOUSE
+//
+// Initializes the "Thrustmaster Combined" virtual device with a custom DX button
+// count. 
+// The maximum possible DX button count is fixed by the driver to 120, any 
+// greater value results in an immediate Windows BSOD. 
+// Any value greater than 120 for 'n' parameter will be automatically clamped to 
+// 120 to prevent crash.
+//
+int InitMoreDX(int n, alias h, int cfg=CREATE_JOYSTICK+CREATE_KEYBOARD+CREATE_MOUSE)
+{
+  // clamp value to 120, more than 120 cause a BSOD due to software limitation
+  if(n > 120) n = 120;
+  
+  // virtualj is a global object declared and defined in the target.tmh header.
+  // Here, we change the default value of its ButtonsNumber member from 32 to 
+  // the desired value.
+  //
+  // This must occure before the call to Init() function, where the virtualj 
+  // structure is passed to the internal PlugGame() function which createe  
+  // the virtual device.
+  virtualj.ButtonsNumber = n; // Change virtual device param
+  
+  // call the real Init() function
+  return Init(&h, cfg);
+}
+
