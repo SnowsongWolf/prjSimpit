@@ -1,0 +1,281 @@
+include "target.tmh"
+//include "hello.h"
+include "modules/ModDX++.tmh"
+
+define FLAPS_UP			-32767
+define FLAPS_MVR		22700
+define FLAPS_DN			29112
+
+float lastVal;
+int lastVal2 = 3, isOn = 0, lookBack = 0, ping = 0;
+//alias _hello;
+
+//program startup
+int main()
+{
+    //if(Init(&EventHandle)) return 1; // declare the event handler, return on error
+    if(InitMoreDX(120, &EventHandle)) return 1;
+    
+    MapKey(&Joystick, S4, 0);
+    SetShiftButton(&Joystick, S4);
+    
+    //MapAxis(&Joystick, JOYX, DX_X_AXIS);
+    MapAxis(&Joystick, JOYY, DX_Y_AXIS);
+    MapAxis(&Throttle, THR_LEFT, 0);
+    MapAxis(&Throttle, THR_FC, 0);
+    //MapAxis(&Throttle, THR_RIGHT, DX_THROTTLE_AXIS);
+    MapAxis(&Throttle, THR_RIGHT, 0);
+    //MapAxis(&Throttle, THR_FC, DX_THROTTLE_AXIS, AXIS_REVERSED);
+    /*MapAxis(&T16000L, JOYX, DX_XROT_AXIS);
+    MapAxis(&T16000L, JOYY, DX_YROT_AXIS, AXIS_REVERSED);*/
+    //MapAxis(&T16000L, RUDDER, DX_ZROT_AXIS);
+    MapAxis(&TFRPRudder, TRUDDER, DX_Z_AXIS, AXIS_REVERSED);
+    MapAxis(&T16000L, THR, 0, AXIS_REVERSED);
+    MapAxis(&VIRPILConstell, CJOYZ, DX_ZROT_AXIS);
+    
+    //Updated throttle behavior
+    MapAxis(&Throttle, THR_FC, DX_SLIDER_AXIS, AXIS_REVERSED);
+    
+    miningMode(1);
+    toggleLook(1);
+    togglePing(1);
+    
+    MapKey(&Throttle, MSP, 'b');
+    MapKey(&T16000L, TG1, DX2);
+    MapKey(&VIRPILConstell, BC1, L_SHIFT);
+    MapKey(&T16000L, H1U, 'b');
+    MapKey(&T16000L, H1R, 'n');
+    MapKey(&VIRPILConstell, TC3, 0);
+    //MapKey(&Joystick, S4, USB[0x63]);
+    //MapKey(&Joystick, S4, CHAIN(DOWN+DX2,D(250),UP+DX2,D(250),DOWN+DX2,D(250),UP+DX2,D(1000),
+			//DOWN+DX2,D(250),UP+DX2,D(250), DOWN+DX2,D(250),UP+DX2,D(250),
+			//DOWN+DXHATLEFT,D(250),UP+DXHATLEFT,D(250),DOWN+DX2,D(250),UP+DX2,D(1000)));
+    MapKey(&T16000L, H1L, 'v');
+    MapKey(&T16000L, B8, 'm');
+    
+    MapKey(&Joystick, S2, DX20);
+    
+    MapKey(&Joystick, H1L, EXEC("TrimDXAxis(DX_Z_AXIS, -5);trimLED(1);printTrim();"));//Rudder Trim Offset Pulse Left
+	MapKey(&Joystick, H1R, EXEC("TrimDXAxis(DX_Z_AXIS, 5);trimLED(1);printTrim();"));//Rudder Trim Offset Pulse Right
+	MapKey(&Joystick, H1U, EXEC("TrimDXAxis(DX_Y_AXIS, -5);trimLED(1);printTrim();"));//Elevator Trim Offset Pulse Up
+	MapKey(&Joystick, H1D, EXEC("TrimDXAxis(DX_Y_AXIS, 5);trimLED(1);printTrim();"));//Elevator Trim Offset Pulse Down
+	
+	MapKeyIO(&Joystick, H3U, DX11, DX26);
+	MapKeyIO(&Joystick, H3R, DX12, DX27);
+	MapKeyIO(&Joystick, H3D, DX13, DX28);
+	MapKeyIO(&Joystick, H3L, DX14, DX29);
+	
+	//MapKey(&T16000L, TG1, EXEC("printThrottle();"));
+	
+	MapKey(&T16000L, B7, EXEC("miningMode();"));
+	MapKey(&VIRPILConstell, BC7, EXEC("toggleLook();"));
+	MapKey(&T16000L, TS4, EXEC("togglePing();"));
+	MapKey(&T16000L, B8, L_ALT + '1');
+	MapKey(&T16000L, B9, L_ALT + '2');
+	MapKey(&T16000L, B10, L_ALT + '3');
+	
+	MapKey(&Joystick, S3, TEMPO(EXEC("TrimDXAxis(DX_Z_AXIS, CURRENT);TrimDXAxis(DX_Y_AXIS, CURRENT);trimLED(1);printTrim();"),
+			EXEC("TrimDXAxis(DX_Z_AXIS, SET(0)); TrimDXAxis(DX_Y_AXIS, SET(0));trimLED(0);printTrim();")));
+			//Center Elevator and Rudder Trim Offset, Memorize stick position for long press
+			
+	MapKeyIO(&Joystick, H2U, DX21, DX7);
+	MapKeyIO(&Joystick, H2R, DX22, DX8);
+	MapKeyIO(&Joystick, H2D, DX23, DX9);
+	MapKeyIO(&Joystick, H2L, DX24, DX10);
+	
+	MapKey(&VIRPILConstell, BC8, DX28);
+	MapKey(&VIRPILConstell, BC9, DX29);
+	MapKey(&VIRPILConstell, HC1L, DX30);
+	MapKey(&VIRPILConstell, HC1R, DX31);
+	MapKey(&VIRPILConstell, BC3, DX23);
+	MapKey(&VIRPILConstell, BC4, DX24);
+	MapKey(&VIRPILConstell, BC10, DX40);
+	MapKey(&VIRPILConstell, BC2, DX22);
+    
+    SetSCurve(&VIRPILConstell, JOYX, 0, 2, 0, 3, 0);
+    SetSCurve(&VIRPILConstell, JOYY, 0, 2, 0, 3, 0);
+    SetSCurve(&VIRPILConstell, CJOYZ, 0, 2, 0, 3, 0);
+    SetSCurve(&TFRPRudder, TRUDDER, 0, 5, 0, 3, 0);
+    SetSCurve(&Joystick, JOYX, 0, 2, 0, 1, 0);
+    SetSCurve(&Joystick, JOYY, 0, 2, 0, 1, 0);
+    
+    // Two Stage Trigger Function
+    
+    MapKey(&Joystick, TG2, EXEC("trigger2(1);"));
+    MapKeyR(&Joystick, TG2, EXEC("trigger2(0);"));
+    
+    //MapKey(&Joystick, TG2, 'a');
+    //MapKeyR(&Joystick, TG2, EXEC("TrimDXAxis(DX_ZROT_AXIS, SET(0));"));
+	
+	//add initialization code here
+	//int this = fopen("this.txt","w");
+	
+	/*int hinstDLL;
+	int fhello;
+	int x = 0, itmp = 0;
+	
+	hinstDLL = LoadLibrary("prjSimpitC.dll");
+	if (hinstDLL != 0)
+	{
+		printf("Successfully loaded DLL instance %i\x0a",hinstDLL);
+		fhello = GetProcAddress(hinstDLL, "_hello");
+		
+		if (fhello != 0)
+			printf("Successfully loaded DLL function %i\x0a",fhello);
+			
+		Map(&_hello, fhello);
+		x = _hello();
+		
+		//fFreeDLL = FreeLibrary(hinstDLL);
+	}else
+		printf("Failed to load DLL instance %i.\x0a",hinstDLL);
+	//x = _hello();
+	printf("Returning %i", x);
+	FreeProcInstance(hinstDLL);*/
+}
+
+//event handler
+int EventHandle(int type, alias o, int x)
+{
+	float value = Throttle[THR_RIGHT] / 64 + 511;
+	if (value != lastVal) {
+		TrimDXAxis(DX_YROT_AXIS, SET(value));
+		//printf("%f\x0a",value);
+		lastVal = value;
+	};
+	
+	int value2 = Throttle[FLAPU] + Throttle[FLAPD] * 2;
+	/*if (value2 != lastVal2) {
+		MapAxis(&Throttle, THR_FC, 0);
+		if (Throttle[FLAPU])
+			DXAxis(DX_SLIDER_AXIS, -FLAPS_UP);
+		else if (Throttle[FLAPD])
+			DXAxis(DX_SLIDER_AXIS, -FLAPS_DN);
+		else {
+			//DXAxis(DX_SLIDER_AXIS, -FLAPS_MVR);
+			DXAxis(DX_SLIDER_AXIS, -Throttle[THR_FC]);
+			MapAxis(&Throttle, THR_FC, DX_SLIDER_AXIS, AXIS_REVERSED);
+		};
+			
+		lastVal2 = value2;
+		
+		value = Axis[DX_SLIDER_AXIS].pos;
+		//printf("Slider: %f\x0a",value);
+	}*/
+	
+	if (value2 != lastVal2) {
+		if (Throttle[FLAPU])
+			DXAxis(DX_THROTTLE_AXIS, -FLAPS_UP);
+		else if (Throttle[FLAPD])
+			DXAxis(DX_THROTTLE_AXIS, -FLAPS_DN);
+		else 
+			DXAxis(DX_THROTTLE_AXIS, -FLAPS_MVR);
+			
+		lastVal2 = value2;
+	};
+	
+	
+	
+	
+    DefaultMapping(&o, x);
+	
+	//add event handling code here
+}
+
+int printTrim() {
+	//printf("Z Trim: %i | Y Trim: %i\x0a", Axis[DX_Z_AXIS].trim, Axis[DX_Y_AXIS].trim);
+	return 0;
+}
+
+int trimLED(int isOn) {
+	if (isOn)
+		ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED1));
+	else
+		ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED1));
+}
+
+int miningMode(int act = 0) {
+	if (act) isOn = 1;
+	
+	if (!isOn) {
+		ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED2));
+	    /*MapAxis(&Joystick, JOYX, MOUSE_X_AXIS, AXIS_NORMAL, MAP_RELATIVE);
+    	MapAxis(&Joystick, JOYY, MOUSE_Y_AXIS, AXIS_REVERSED, MAP_RELATIVE);
+    	SetSCurve(&Joystick, JOYX, 0, 2, 0, 1, -18);
+    	SetSCurve(&Joystick, JOYY, 0, 2, 0, 1, -15);*/
+    	//SetCustomCurve(&T16000L, JOYY, LIST(-32767, -32767, -16383, -22655, -5, -15000, 5, 15000, 16383, 22655, 32767, 32767));
+    	//SetCustomCurve(&T16000L, JOYY, LIST(0,0, 5,45, 100,100));
+    	//SetSCurve(&T16000L, JOYY, 0, 0, 0, -5, 1);
+    	SetDCurve(&T16000L, JOYY);
+    	//SetJCurve(&T16000L, JOYY, 5, 45);
+    	isOn = 1;
+    	//printf("Driving mode enabled.\x0a");
+	} else {
+		ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED2));
+		/*MapAxis(&Joystick, JOYX, DX_X_AXIS);
+    	MapAxis(&Joystick, JOYY, DX_Y_AXIS);
+    	SetSCurve(&Joystick, JOYX, 0, 2, 0, 1, 0);
+    	SetSCurve(&Joystick, JOYY, 0, 2, 0, 1, 0);*/
+    	SetSCurve(&T16000L, JOYY, 0, 2, 0, 3, 0);
+    	isOn = 0;
+    	//printf("Driving mode disabled.\x0a");
+	}
+	return 0;
+}
+
+int toggleLook(int act = 0) {
+	if (act) lookBack = 1;
+	
+	if (!lookBack) {
+		ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED3));
+		ActKey(KEYON+DOWN+DX25);
+		MapAxis(&Joystick, JOYX, DX_X_AXIS, AXIS_REVERSED);
+    	MapAxis(&Joystick, JOYY, DX_Y_AXIS, AXIS_REVERSED);
+    	MapAxis(&VIRPILConstell, JOYX, DX_XROT_AXIS, AXIS_REVERSED);
+    	MapAxis(&VIRPILConstell, JOYY, DX_YROT_AXIS, AXIS_NORMAL);
+		lookBack = 1;
+		//printf("Look back locked on.\x0a");
+	} else {
+		ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED3));
+		ActKey(KEYON+UP+DX25);
+		MapAxis(&Joystick, JOYX, DX_X_AXIS, AXIS_NORMAL);
+    	MapAxis(&Joystick, JOYY, DX_Y_AXIS, AXIS_NORMAL);
+    	MapAxis(&VIRPILConstell, JOYX, DX_XROT_AXIS, AXIS_NORMAL);
+    	MapAxis(&VIRPILConstell, JOYY, DX_YROT_AXIS, AXIS_REVERSED);
+		lookBack = 0;
+		//printf("Look back released.\x0a");
+	}
+	return 0;
+}
+
+int togglePing(int act = 0) {
+	if (act) ping = 1;
+	
+	if (ping) {
+		StopAutoRepeat(0);
+		ping = 0;
+	} else {
+		StopAutoRepeat(0);
+		ActKey(PULSE+KEYON+REXEC(0, 2000, "ActKey(PULSE+KEYON+TAB);", RNOSTOP));
+		ping = 1;
+	};
+	return 0;
+}
+
+int printThrottle() {
+	//printf("Throttle: %i | Axis: %i\x0a",T16000L[JOYY], Axis[DX_YROT_AXIS].pos);
+	return 0;
+}
+
+int trigger2(int tg = 0) {
+	int trimVal = (Axis[DX_YROT_AXIS].pos + Axis[DX_YROT_AXIS].trim)/32;
+	if (!tg) {
+		TrimDXAxis(DX_ZROT_AXIS, SET(0));
+	}else{
+		TrimDXAxis(DX_ZROT_AXIS, SET(trimVal));
+		//TrimDXAxis(DX_ZROT_AXIS, SET(63));
+		printThrottle();
+	}
+
+	return 0;
+}
